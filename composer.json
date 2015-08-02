@@ -1,0 +1,31 @@
+{
+    "name": "hrvanderlingen/chemical",
+    "minimum-stability": "dev",
+    "description": "Angular demo periodic table",
+    "homepage": "https://github.com/hrvanderlingen/chemical",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "hrvanderlingen",
+            "email": "info@assessmentee.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "diniska/chemistry",
+                "version": "1.0",
+                "dist": {
+                    "url": "https://github.com/diniska/chemistry/archive/master.zip",
+                    "type": "zip"
+                }
+            }
+        }
+    ],
+    "require": {
+        "php": ">=5.3.1",
+        "diniska/chemistry": "*"
+    }      
+}

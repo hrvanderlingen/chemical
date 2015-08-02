@@ -5,8 +5,10 @@ return array(
         'template_path_stack' => array(
             'chemistry' => __DIR__ . '/../view',
         ),
+        'template_map' => array(
+            'chemical/layout' => __DIR__ . '/../view/layout/layout.phtml',
+        ),
     ),
-   
     'router' => array(
         'routes' => array(
             'chemistry' => array(
@@ -15,9 +17,9 @@ return array(
                     'route' => '/chemistry',
                     'defaults' => array(
                         'controller' => 'chemistry',
-                        'action'     => 'index',
+                        'action' => 'index',
                     ),
-                ),               
+                ),
             ),
         ),
     ),
@@ -25,6 +27,20 @@ return array(
         'invokables' => array(
             'Chemistry'
             => 'Chemical\Controller\IndexController'
+        ),
+    ),
+    'asset_manager' => array(
+        'resolver_configs' => array(
+            'prioritized_paths' => array(
+                array(
+                    "path" => __DIR__ . '/../public_html',
+                    "priority" => 100
+                ),
+                array(
+                    "path" => __DIR__ . '/../vendor/diniska/chemistry/periodicalTable',
+                    "priority" => 50
+                )
+            ),
         ),
     ),
 );

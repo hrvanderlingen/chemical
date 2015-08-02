@@ -4,6 +4,7 @@ namespace Chemical;
 
 use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
 use Zend\ModuleManager\Feature\ConfigProviderInterface;
+use Zend\ModuleManager\ModuleManager;
 
 class Module implements AutoloaderProviderInterface, ConfigProviderInterface
 {
@@ -25,6 +26,13 @@ class Module implements AutoloaderProviderInterface, ConfigProviderInterface
     public function getConfig()
     {
         return include __DIR__ . '/config/module.config.php';
+    }
+
+    public function init(ModuleManager $mm)
+    {
+        $mm->getEventManager()->getSharedManager()->attach(__NAMESPACE__, 'dispatch', function($e) {
+            $e->getTarget()->layout('chemical/layout');
+        });
     }
 
 }

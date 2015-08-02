@@ -1,0 +1,82 @@
+.flex-container {
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    position:relative;
+}
+
+.flex-container .rows
+{
+    -webkit-flex: 1 1 50px;
+    flex: 1 1 50px;
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+.flex-container div.rows div.elements {
+	position: relative;
+	display:block;
+    width:40px;
+    height:40px;
+    background-color:#fff4db;
+    margin:10px;
+    text-align:center;
+    color:brown;
+    box-shadow: 4px 4px 3px #8d8d8d;
+	 cursor: pointer;
+}
+
+.flex-container div.rows div.dummy {
+    visibility:hidden;
+}
+
+.flex-container div.rows div.placeholder {
+    color:#000;
+}
+
+.flex-container div.rows div.elements p {
+    padding-top:-7px;
+}
+
+@media screen and (max-width: 1050px) {
+    .flex-container div.rows div.dummy {
+        display:none;
+    }
+}
+
+/*  http://callmenick.com/_development/input-text-styles/ */
+
+ul.input-list {
+    list-style: outside none none;
+}
+
+input[type="text"] {
+  display: block;
+  margin: 0;
+  width: 100%;
+  font-family: sans-serif;
+  font-size: 18px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+}
+input[type="text"]:focus {
+  outline: none;
+}
+
+.style-1 input[type="text"] {
+  padding: 10px;
+  border: solid 1px #dcdcdc;
+  transition: box-shadow 0.3s, border 0.3s;
+   width: 200px;
+}
+.style-1 input[type="text"]:focus,
+.style-1 input[type="text"].focus {
+  border: solid 1px #707070;
+  box-shadow: 0 0 5px 1px #969696;
+}
