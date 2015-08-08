@@ -1,0 +1,22 @@
+  <div class="flex-container" ng-controller="TableDataCtrl">
+
+            <ul class="input-list style-1 clearfix">
+                <li>
+                    <input ng-model="search.small"  type="text"><br>
+                </li>
+
+            </ul>
+
+
+
+            <div class="rows" ng-repeat="row in elements">
+
+                <div class="{{element.className}} order_{{element.position}}"  draggable ng-repeat="element in row | filter:search:strict">
+                    <p>{{element.small}}</p>
+
+                </div>
+
+
+            </div>
+
+        </div>

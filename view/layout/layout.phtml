@@ -9,18 +9,35 @@
 
 
         <script src="/components/jquery/jquery.min.js"></script>
-
+        <link href="/components/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <script src="/components/bootstrap/js/bootstrap.min.js"></script>
+        
 
         <?php echo $this->headScript(); ?>
         <?php echo $this->headLink(); ?>
-
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
         <title>Orinoco River Zend Framework demo site</title>
     </head>
     <body>
+        <div class="container">
+            <div class="header clearfix">
+             
+                <div class="btn-group" role="group">
+                    <a href="#home"  class="btn btn-default">Home</a>
+                    <a href="#table"  class="btn btn-default">Table</a>
+                    <a href="#synonym" class="btn btn-default">Synonyms</a>
+                </div>
 
 
 
-        <?php echo $this->content; ?>
+            </div>
 
+            <br /><br />
+
+
+            <?php echo $this->content; ?>
+
+
+        </div>
     </body>
 </html>

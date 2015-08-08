@@ -10,22 +10,5 @@
             "name": "hrvanderlingen",
             "email": "info@assessmentee.com"
         }
-    ],
-    "repositories": [
-        {
-            "type": "package",
-            "package": {
-                "name": "diniska/chemistry",
-                "version": "1.0",
-                "dist": {
-                    "url": "https://github.com/diniska/chemistry/archive/master.zip",
-                    "type": "zip"
-                }
-            }
-        }
-    ],
-    "require": {
-        "php": ">=5.3.1",
-        "diniska/chemistry": "*"
-    }      
+    ]         
 }

@@ -37,7 +37,7 @@ return array(
                     "priority" => 100
                 ),
                 array(
-                    "path" => __DIR__ . '/../vendor/diniska/chemistry/periodicalTable',
+                    "path" => __DIR__ . '/../../../diniska/chemistry/PeriodicalTable',
                     "priority" => 50
                 )
             ),
