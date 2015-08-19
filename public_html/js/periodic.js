@@ -1,4 +1,5 @@
-var chemicalApp = angular.module('chemicalApp', ['ngRoute']);
+var chemicalApp = angular.module('chemicalApp', ['ngSanitize','ngRoute']);
+
 
 chemicalApp.controller('TableDataCtrl', function($scope, TableData) {
 
@@ -52,7 +53,6 @@ chemicalApp.controller('TableDataCtrl', function($scope, TableData) {
 });
 
 
-
 /*
  * Source code for this directive: https://docs.angularjs.org/guide/compiler
  */
@@ -104,6 +104,10 @@ chemicalApp.config(function($routeProvider) {
                 templateUrl: 'pages/synonym.html',
                 controller: 'SynonymCtrl'
             })
+            .when('/temperature', {
+                templateUrl: 'pages/temperature.html',
+                controller: 'TemperatureCtrl'
+            })
             .otherwise({
                 redirectTo: '/pages/home'
             });
@@ -130,6 +134,21 @@ chemicalApp.factory('SynonymData', function($http) {
     };
 });
 
+chemicalApp.factory('TemperatureData', function($http) {
+    return {
+        getTemperature: function(kelvin, callback) {
+            $http.post('http://orinoco.vander-lingen.nl/chemistry/rest/kelvin/200', {kelvin:kelvin}).success(callback);
+        }
+    };
+});
+
+chemicalApp.factory('TemperatureDataByGet', function($http) {
+    return {
+        getTemperature: function(kelvin, callback) {
+            $http.get('http://orinoco.vander-lingen.nl/chemistry/rest/kelvin/' + kelvin).success(callback);
+        }
+    };
+});
 
 chemicalApp.controller('SynonymCtrl', function($scope, SynonymData) {
     $scope.message = 'The synonyms for ';
@@ -146,6 +165,21 @@ chemicalApp.controller('SynonymCtrl', function($scope, SynonymData) {
 
         SynonymData.getSynonym(inchi, function(data) {
             $scope.synonyms = data;
+
+        });
+    }
+});
+
+chemicalApp.controller('TemperatureCtrl', function($scope, TemperatureData) {
+   
+    $scope.kelvin = "200";
+
+    $scope.submit = function(form) {
+
+        kelvin = form.kelvin.$viewValue;
+
+        TemperatureData.getTemperature(kelvin, function(results) {
+            $scope.data = results.data;
 
         });
     }

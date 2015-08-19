@@ -13,8 +13,7 @@ class IndexController extends AbstractActionController
         $viewModel = new ViewModel;
 
         $renderer = $this->serviceLocator->get('Zend\View\Renderer\RendererInterface');
-        $renderer->headScript()->appendFile('/js/angular.min.js');
-
+        
         /**
          * File served from module public_html folder
          * http://ocramius.github.io/blog/asset-manager-for-zend-framework-2/
