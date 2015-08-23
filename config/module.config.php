@@ -43,13 +43,19 @@ return array(
 	    ),
 	),
     ),
+    'service_manager' => array(
+	'factories' => array(
+	    'temperatureService' => 'Chemical\Factory\TemperatureServiceFactory'
+	)
+    ),
     'controllers' => array(
 	'invokables' => array(
 	    'Chemistry'
-	    => 'Chemical\Controller\IndexController',
-	    'Rest'
-	    => 'Chemical\Controller\RestController'
+	    => 'Chemical\Controller\IndexController',	   
 	),
+	'factories' => array(
+	    'Rest' => 'Chemical\Factory\RestControllerFactory'
+	)
     ),
     'asset_manager' => array(
 	'resolver_configs' => array(

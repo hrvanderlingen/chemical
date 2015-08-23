@@ -4,18 +4,28 @@ namespace Chemical\Controller;
 
 use Zend\Mvc\Controller\AbstractRestfulController;
 use Zend\View\Model\JsonModel;
+use Chemical\Service\TemperatureService;
+use Chemical\Service\TemperatureServiceInterface;
 
 class RestController extends AbstractRestfulController
 {
+
+    protected $temperatureService;
+
+    public function __construct(TemperatureServiceInterface $temperatureService)
+    {
+	$this->temperatureService = $temperatureService;
+    }
 
     public function get($id)
     {
 	$headers = array(
 	    'Access-Control-Allow-Origin' => '*'
 	);
-
+	$kelvinScale = $this->params()->fromRoute('id');
 	$this->getResponse()->getHeaders()->addHeaders($headers);
-	return new JsonModel(array("data" => array(array('scale' => 'Kelvin', 'value' => $id), array('scale' => 'Celsius', 'value' => ($id - 273.15)))));
+	return new JsonModel(array(
+	    "data" => $this->temperatureService->getTemperatureConversionArray($kelvinScale)));
     }
 
     public function create($data)
@@ -23,9 +33,10 @@ class RestController extends AbstractRestfulController
 	$headers = array(
 	    'Access-Control-Allow-Origin' => '*'
 	);
-
+	$kelvinScale = $this->params()->fromRoute('id');
 	$this->getResponse()->getHeaders()->addHeaders($headers);
-	return new JsonModel(array("data" => array(array('scale' => 'Kelvin', 'value' => 500), array('scale' => 'Celsius', 'value' => (500 - 273.15)))));
+	return new JsonModel(array(
+	    "data" => $this->temperatureService->getTemperatureConversionArray($kelvinScale)));
     }
 
     public function options()
