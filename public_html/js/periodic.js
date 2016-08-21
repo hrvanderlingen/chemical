@@ -1,12 +1,11 @@
-var chemicalApp = angular.module('chemicalApp', ['ngSanitize','ngRoute']);
+var chemicalApp = angular.module('chemicalApp', ['ngSanitize', 'ngRoute']);
 
-
-chemicalApp.controller('TableDataCtrl', function($scope, TableData) {
+chemicalApp.controller('TableDataCtrl', function ($scope, TableData) {
 
     $scope.elements = [];
 
-    TableData.periodicData(function(data) {
-
+    TableData.periodicData(function (input) {
+        data = input.data;
         var rows = [];
         var previousPosition;
 
@@ -14,6 +13,7 @@ chemicalApp.controller('TableDataCtrl', function($scope, TableData) {
             var i = 0;
             var elems = [];
             elementRow = data.table[row];
+            console.log(row);
 
             for (element in elementRow.elements) {
 
@@ -57,11 +57,11 @@ chemicalApp.controller('TableDataCtrl', function($scope, TableData) {
  * Source code for this directive: https://docs.angularjs.org/guide/compiler
  */
 
-chemicalApp.directive('draggable', function($document) {
-    return function(scope, element, attr) {
+chemicalApp.directive('draggable', function ($document) {
+    return function (scope, element, attr) {
         var startX = 0, startY = 0, x = 0, y = 0;
 
-        element.on('mousedown', function(event) {
+        element.on('mousedown', function (event) {
 
             event.preventDefault();
             startX = event.screenX - x;
@@ -87,7 +87,7 @@ chemicalApp.directive('draggable', function($document) {
 });
 
 
-chemicalApp.config(function($routeProvider) {
+chemicalApp.config(function ($routeProvider) {
     $routeProvider
 
             .when('/home', {
@@ -108,53 +108,56 @@ chemicalApp.config(function($routeProvider) {
                 templateUrl: 'pages/temperature.html',
                 controller: 'TemperatureCtrl'
             })
+            .when('/tree', {
+                templateUrl: 'pages/tree.html'
+            })
             .otherwise({
                 redirectTo: '/pages/home'
             });
 });
 
-chemicalApp.controller('HomeCtrl', function($scope) {
+chemicalApp.controller('HomeCtrl', function ($scope) {
     $scope.message = 'hi there';
 });
 
 
-chemicalApp.factory('TableData', function($http) {
+chemicalApp.factory('TableData', function ($http) {
     return {
-        periodicData: function(callback) {
-            $http.get('periodicTable.json').success(callback);
+        periodicData: function (successCallback) {
+            $http.get('periodicTable.json').then(successCallback);
         }
     };
 });
 
-chemicalApp.factory('SynonymData', function($http) {
+chemicalApp.factory('SynonymData', function ($http) {
     return {
-        getSynonym: function(inchi, callback) {
-            $http.get('http://cts.fiehnlab.ucdavis.edu/service/synonyms/' + inchi).success(callback);
+        getSynonym: function (inchi, successCallback) {
+            $http.get('http://cts.fiehnlab.ucdavis.edu/service/synonyms/' + inchi).then(successCallback);
         }
     };
 });
 
-chemicalApp.factory('TemperatureData', function($http) {
+chemicalApp.factory('TemperatureData', function ($http) {
     return {
-        getTemperature: function(kelvin, callback) {
-            $http.post('http://orinoco.vander-lingen.nl/chemistry/rest/kelvin/200', {kelvin:kelvin}).success(callback);
+        getTemperature: function (kelvin, successCallback) {
+            $http.post('http://orinoco.vander-lingen.nl/chemistry/rest/kelvin/200', {kelvin: kelvin}).then(successCallback);
         }
     };
 });
 
-chemicalApp.factory('TemperatureDataByGet', function($http) {
+chemicalApp.factory('TemperatureDataByGet', function ($http) {
     return {
-        getTemperature: function(kelvin, callback) {
-            $http.get('http://orinoco.vander-lingen.nl/chemistry/rest/kelvin/' + kelvin).success(callback);
+        getTemperature: function (kelvin, successCallback) {
+            $http.get('http://orinoco.vander-lingen.nl/chemistry/rest/kelvin/' + kelvin).then(successCallback);
         }
     };
 });
 
-chemicalApp.controller('SynonymCtrl', function($scope, SynonymData) {
+chemicalApp.controller('SynonymCtrl', function ($scope, SynonymData) {
     $scope.message = 'The synonyms for ';
     $scope.inchi = "LFQSCWFLJHTTHZ-UHFFFAOYSA-N";
 
-    $scope.submit = function(form) {
+    $scope.submit = function (form) {
 
         if (form.$invalid) {
             $scope.errorMessage = 'This is not a valid InChi key';
@@ -163,26 +166,56 @@ chemicalApp.controller('SynonymCtrl', function($scope, SynonymData) {
 
         inchi = form.inchi.$viewValue;
 
-        SynonymData.getSynonym(inchi, function(data) {
+        SynonymData.getSynonym(inchi, function (data) {
             $scope.synonyms = data;
 
         });
     }
 });
 
-chemicalApp.controller('TemperatureCtrl', function($scope, TemperatureData) {
-   
+chemicalApp.controller('TemperatureCtrl', function ($scope, TemperatureData) {
+
     $scope.kelvin = "200";
 
-    $scope.submit = function(form) {
+    $scope.submit = function (form) {
 
         kelvin = form.kelvin.$viewValue;
 
-        TemperatureData.getTemperature(kelvin, function(results) {
+        TemperatureData.getTemperature(kelvin, function (results) {
             $scope.data = results.data;
 
         });
     }
+});
+
+
+chemicalApp.controller('TreeCtrl', function ($scope, TreeData) {
+
+
+    $scope.node = "stereochemistry";
+
+    $scope.submit = function (form) {
+
+        node = form.node.$viewValue;
+
+        TreeData.getTree(node, function (results) {
+            $scope.data = JSON.stringify(results.data, undefined, 2);
+            $scope.error = 0;
+        }, function (results) {
+            $scope.data = results.data;
+            $scope.error = 1;
+        });
+    }
+
+});
+
+
+chemicalApp.factory('TreeData', function ($http) {
+    return {
+        getTree: function (node, successCallback, errorCallback) {
+            $http.post('/chemistry/tree', {node: node}).then(successCallback).catch(errorCallback);
+        }
+    };
 });
 
 

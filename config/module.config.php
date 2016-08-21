@@ -19,7 +19,7 @@ return array(
 		'options' => array(
 		    'route' => '/chemistry',
 		    'defaults' => array(
-			'controller' => 'chemistry',
+			'controller' => 'Chemical\Controller\IndexController',
 			'action' => 'index',
 		    ),
 		),
@@ -39,22 +39,45 @@ return array(
 			    )
 			),
 		    ),
+		    'tree' => array(
+			'type' => 'segment',
+			'options' => array(
+			    'route' => '/tree',
+			    'defaults' => array(
+				'controller' => 'Tree',
+				'action' => ''
+			    ),
+			),
+		    ),
+		    'trees' => array(
+			'type' => 'segment',
+			'options' => array(
+			    'route' => '/trees',
+			    'defaults' => array(
+				'controller' => 'Chemical\Controller\IndexController',
+				'action' => 'tree'
+			    ),
+			),
+		    ),
 		),
 	    ),
 	),
     ),
     'service_manager' => array(
 	'factories' => array(
-	    'temperatureService' => 'Chemical\Factory\TemperatureServiceFactory'
+	    'temperatureService' => 'Chemical\Factory\TemperatureServiceFactory',
+	    'treeService' => 'Chemical\Factory\TreeServiceFactory'
 	)
     ),
     'controllers' => array(
 	'invokables' => array(
-	    'Chemistry'
-	    => 'Chemical\Controller\IndexController',	   
+	    'Chemical\Controller\IndexController'
+	    => 'Chemical\Controller\IndexController'
+	    
 	),
 	'factories' => array(
-	    'Rest' => 'Chemical\Factory\RestControllerFactory'
+	    'Rest' => 'Chemical\Factory\RestControllerFactory',
+	    'Tree' => 'Chemical\Factory\TreeControllerFactory'
 	)
     ),
     'asset_manager' => array(
