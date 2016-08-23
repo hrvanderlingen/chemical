@@ -6,11 +6,7 @@
         "href": "/wiki/Category:Chemistry_set_index_pages",
         "Molecular formula set index pages": {
           "name": "Molecular formula set index pages",
-          "href": "/wiki/Category:Molecular_formula_set_index_pages",
-          "Inorganic molecular formula set index pages": {
-            "name": "Inorganic molecular formula set index pages",
-            "href": "/wiki/Category:Inorganic_molecular_formula_set_index_pages"
-          }
+          "href": "/wiki/Category:Molecular_formula_set_index_pages"
         }
       },
       "Acid-base chemistry": {
@@ -26,251 +22,7 @@
         },
         "Carbon forms": {
           "name": "Carbon forms",
-          "href": "/wiki/Category:Carbon_forms",
-          "Carbon nanotubes": {
-            "name": "Carbon nanotubes",
-            "href": "/wiki/Category:Carbon_nanotubes"
-          },
-          "Charcoal": {
-            "name": "Charcoal",
-            "href": "/wiki/Category:Charcoal"
-          },
-          "Diamond": {
-            "name": "Diamond",
-            "href": "/wiki/Category:Diamond",
-            "Blood diamonds": {
-              "name": "Blood diamonds",
-              "href": "/wiki/Category:Blood_diamonds",
-              "De Beers": {
-                "name": "De Beers",
-                "href": "/wiki/Category:De_Beers"
-              },
-              "Sierra Leone Civil War": {
-                "name": "Sierra Leone Civil War",
-                "href": "/wiki/Category:Sierra_Leone_Civil_War",
-                "People of the Sierra Leone Civil War": {
-                  "name": "People of the Sierra Leone Civil War",
-                  "href": "/wiki/Category:People_of_the_Sierra_Leone_Civil_War",
-                  "British military personnel of the Sierra Leone Civil War": {
-                    "name": "British military personnel of the Sierra Leone Civil War",
-                    "href": "/wiki/Category:British_military_personnel_of_the_Sierra_Leone_Civil_War"
-                  },
-                  "People indicted by the Special Court for Sierra Leone": {
-                    "name": "People indicted by the Special Court for Sierra Leone",
-                    "href": "/wiki/Category:People_indicted_by_the_Special_Court_for_Sierra_Leone",
-                    "People convicted by the Special Court for Sierra Leone": {
-                      "name": "People convicted by the Special Court for Sierra Leone",
-                      "href": "/wiki/Category:People_convicted_by_the_Special_Court_for_Sierra_Leone"
-                    }
-                  }
-                },
-                "Rebel groups in Sierra Leone": {
-                  "name": "Rebel groups in Sierra Leone",
-                  "href": "/wiki/Category:Rebel_groups_in_Sierra_Leone"
-                },
-                "Special Court for Sierra Leone": {
-                  "name": "Special Court for Sierra Leone",
-                  "href": "/wiki/Category:Special_Court_for_Sierra_Leone",
-                  "People convicted by the Special Court for Sierra Leone": {
-                    "name": "People convicted by the Special Court for Sierra Leone",
-                    "href": "/wiki/Category:People_convicted_by_the_Special_Court_for_Sierra_Leone"
-                  },
-                  "People indicted by the Special Court for Sierra Leone": {
-                    "name": "People indicted by the Special Court for Sierra Leone",
-                    "href": "/wiki/Category:People_indicted_by_the_Special_Court_for_Sierra_Leone",
-                    "People convicted by the Special Court for Sierra Leone": {
-                      "name": "People convicted by the Special Court for Sierra Leone",
-                      "href": "/wiki/Category:People_convicted_by_the_Special_Court_for_Sierra_Leone"
-                    }
-                  },
-                  "Special Court for Sierra Leone judges": {
-                    "name": "Special Court for Sierra Leone judges",
-                    "href": "/wiki/Category:Special_Court_for_Sierra_Leone_judges"
-                  },
-                  "Special Court for Sierra Leone prosecutors": {
-                    "name": "Special Court for Sierra Leone prosecutors",
-                    "href": "/wiki/Category:Special_Court_for_Sierra_Leone_prosecutors"
-                  }
-                }
-              }
-            },
-            "Diamond cutting": {
-              "name": "Diamond cutting",
-              "href": "/wiki/Category:Diamond_cutting"
-            },
-            "De Beers": {
-              "name": "De Beers",
-              "href": "/wiki/Category:De_Beers"
-            },
-            "Diamond dealers": {
-              "name": "Diamond dealers",
-              "href": "/wiki/Category:Diamond_dealers"
-            },
-            "Diamond industry in India": {
-              "name": "Diamond industry in India",
-              "href": "/wiki/Category:Diamond_industry_in_India",
-              "Diamond mines in India": {
-                "name": "Diamond mines in India",
-                "href": "/wiki/Category:Diamond_mines_in_India"
-              },
-              "Diamonds originating in India": {
-                "name": "Diamonds originating in India",
-                "href": "/wiki/Category:Diamonds_originating_in_India"
-              }
-            },
-            "Diamond mines": {
-              "name": "Diamond mines",
-              "href": "/wiki/Category:Diamond_mines",
-              "Diamond mining companies": {
-                "name": "Diamond mining companies",
-                "href": "/wiki/Category:Diamond_mining_companies",
-                "BHP Billiton": {
-                  "name": "BHP Billiton",
-                  "href": "/wiki/Category:BHP_Billiton",
-                  "Ships of BHP Shipping": {
-                    "name": "Ships of BHP Shipping",
-                    "href": "/wiki/Category:Ships_of_BHP_Shipping"
-                  }
-                },
-                "De Beers": {
-                  "name": "De Beers",
-                  "href": "/wiki/Category:De_Beers"
-                },
-                "Diamond mining companies of Canada": {
-                  "name": "Diamond mining companies of Canada",
-                  "href": "/wiki/Category:Diamond_mining_companies_of_Canada"
-                },
-                "Rio Tinto Group": {
-                  "name": "Rio Tinto Group",
-                  "href": "/wiki/Category:Rio_Tinto_Group",
-                  "People of Rio Tinto Group": {
-                    "name": "People of Rio Tinto Group",
-                    "href": "/wiki/Category:People_of_Rio_Tinto_Group"
-                  },
-                  "Rio Tinto subsidiaries": {
-                    "name": "Rio Tinto subsidiaries",
-                    "href": "/wiki/Category:Rio_Tinto_subsidiaries",
-                    "Alcan": {
-                      "name": "Alcan",
-                      "href": "/wiki/Category:Alcan"
-                    },
-                    "Former Rio Tinto subsidiaries": {
-                      "name": "Former Rio Tinto subsidiaries",
-                      "href": "/wiki/Category:Former_Rio_Tinto_subsidiaries"
-                    },
-                    "Rio Tinto Iron Ore": {
-                      "name": "Rio Tinto Iron Ore",
-                      "href": "/wiki/Category:Rio_Tinto_Iron_Ore"
-                    }
-                  }
-                }
-              },
-              "Diamond mines by country": {
-                "name": "Diamond mines by country",
-                "href": "/wiki/Category:Diamond_mines_by_country",
-                "Diamond mines in Angola": {
-                  "name": "Diamond mines in Angola",
-                  "href": "/wiki/Category:Diamond_mines_in_Angola"
-                },
-                "Diamond mines in Australia": {
-                  "name": "Diamond mines in Australia",
-                  "href": "/wiki/Category:Diamond_mines_in_Australia"
-                },
-                "Diamond mines in Botswana": {
-                  "name": "Diamond mines in Botswana",
-                  "href": "/wiki/Category:Diamond_mines_in_Botswana"
-                },
-                "Diamond mines in Cameroon": {
-                  "name": "Diamond mines in Cameroon",
-                  "href": "/wiki/Category:Diamond_mines_in_Cameroon"
-                },
-                "Diamond mines in Canada": {
-                  "name": "Diamond mines in Canada",
-                  "href": "/wiki/Category:Diamond_mines_in_Canada"
-                },
-                "Diamond mines in India": {
-                  "name": "Diamond mines in India",
-                  "href": "/wiki/Category:Diamond_mines_in_India"
-                },
-                "Diamond mines in Indonesia": {
-                  "name": "Diamond mines in Indonesia",
-                  "href": "/wiki/Category:Diamond_mines_in_Indonesia"
-                },
-                "Diamond mines in Lesotho": {
-                  "name": "Diamond mines in Lesotho",
-                  "href": "/wiki/Category:Diamond_mines_in_Lesotho"
-                },
-                "Diamond mines in Russia": {
-                  "name": "Diamond mines in Russia",
-                  "href": "/wiki/Category:Diamond_mines_in_Russia"
-                },
-                "Diamond mines in South Africa": {
-                  "name": "Diamond mines in South Africa",
-                  "href": "/wiki/Category:Diamond_mines_in_South_Africa"
-                },
-                "Diamond mines in Tanzania": {
-                  "name": "Diamond mines in Tanzania",
-                  "href": "/wiki/Category:Diamond_mines_in_Tanzania"
-                },
-                "Diamond mines in the United States": {
-                  "name": "Diamond mines in the United States",
-                  "href": "/wiki/Category:Diamond_mines_in_the_United_States"
-                },
-                "Diamond mines in Zimbabwe": {
-                  "name": "Diamond mines in Zimbabwe",
-                  "href": "/wiki/Category:Diamond_mines_in_Zimbabwe"
-                }
-              }
-            },
-            "Diamond simulants": {
-              "name": "Diamond simulants",
-              "href": "/wiki/Category:Diamond_simulants"
-            },
-            "Individual diamonds": {
-              "name": "Individual diamonds",
-              "href": "/wiki/Category:Individual_diamonds",
-              "Diamonds originating in Botswana": {
-                "name": "Diamonds originating in Botswana",
-                "href": "/wiki/Category:Diamonds_originating_in_Botswana"
-              },
-              "Diamonds originating in Brazil": {
-                "name": "Diamonds originating in Brazil",
-                "href": "/wiki/Category:Diamonds_originating_in_Brazil"
-              },
-              "Diamonds originating in India": {
-                "name": "Diamonds originating in India",
-                "href": "/wiki/Category:Diamonds_originating_in_India"
-              },
-              "Diamonds originating in Russia": {
-                "name": "Diamonds originating in Russia",
-                "href": "/wiki/Category:Diamonds_originating_in_Russia"
-              },
-              "Diamonds originating in South Africa": {
-                "name": "Diamonds originating in South Africa",
-                "href": "/wiki/Category:Diamonds_originating_in_South_Africa"
-              },
-              "Diamonds originating in the United States": {
-                "name": "Diamonds originating in the United States",
-                "href": "/wiki/Category:Diamonds_originating_in_the_United_States"
-              },
-              "Diamonds originating in the USSR": {
-                "name": "Diamonds originating in the USSR",
-                "href": "/wiki/Category:Diamonds_originating_in_the_USSR"
-              }
-            },
-            "Synthetic diamond": {
-              "name": "Synthetic diamond",
-              "href": "/wiki/Category:Synthetic_diamond"
-            }
-          },
-          "Fullerenes": {
-            "name": "Fullerenes",
-            "href": "/wiki/Category:Fullerenes"
-          },
-          "Graphene": {
-            "name": "Graphene",
-            "href": "/wiki/Category:Graphene"
-          }
+          "href": "/wiki/Category:Carbon_forms"
         },
         "Silicon forms": {
           "name": "Silicon forms",
@@ -286,11 +38,7 @@
         "href": "/wiki/Category:Analytical_chemistry",
         "Analytical chemists": {
           "name": "Analytical chemists",
-          "href": "/wiki/Category:Analytical_chemists",
-          "Spectroscopists": {
-            "name": "Spectroscopists",
-            "href": "/wiki/Category:Spectroscopists"
-          }
+          "href": "/wiki/Category:Analytical_chemists"
         },
         "Analytical reagents": {
           "name": "Analytical reagents",
@@ -306,35 +54,7 @@
         },
         "Chemical tests": {
           "name": "Chemical tests",
-          "href": "/wiki/Category:Chemical_tests",
-          "Elemental analysis": {
-            "name": "Elemental analysis",
-            "href": "/wiki/Category:Elemental_analysis"
-          },
-          "PH indicators": {
-            "name": "PH indicators",
-            "href": "/wiki/Category:PH_indicators",
-            "Anthocyanins": {
-              "name": "Anthocyanins",
-              "href": "/wiki/Category:Anthocyanins",
-              "Anthocyanin rutinosides": {
-                "name": "Anthocyanin rutinosides",
-                "href": "/wiki/Category:Anthocyanin_rutinosides"
-              },
-              "Anthocyanins metabolism": {
-                "name": "Anthocyanins metabolism",
-                "href": "/wiki/Category:Anthocyanins_metabolism"
-              },
-              "O-Methylated anthocyanins": {
-                "name": "O-Methylated anthocyanins",
-                "href": "/wiki/Category:O-Methylated_anthocyanins"
-              },
-              "Pyranoanthocyanins": {
-                "name": "Pyranoanthocyanins",
-                "href": "/wiki/Category:Pyranoanthocyanins"
-              }
-            }
-          }
+          "href": "/wiki/Category:Chemical_tests"
         },
         "Complexometric indicators": {
           "name": "Complexometric indicators",
@@ -342,163 +62,7 @@
         },
         "Crystallography": {
           "name": "Crystallography",
-          "href": "/wiki/Category:Crystallography",
-          "Crystallographers": {
-            "name": "Crystallographers",
-            "href": "/wiki/Category:Crystallographers"
-          },
-          "Crystalline solids": {
-            "name": "Crystalline solids",
-            "href": "/wiki/Category:Crystalline_solids",
-            "Ceramic materials": {
-              "name": "Ceramic materials",
-              "href": "/wiki/Category:Ceramic_materials",
-              "Bricks": {
-                "name": "Bricks",
-                "href": "/wiki/Category:Bricks",
-                "Brick Expressionism": {
-                  "name": "Brick Expressionism",
-                  "href": "/wiki/Category:Brick_Expressionism"
-                },
-                "Brick Gothic": {
-                  "name": "Brick Gothic",
-                  "href": "/wiki/Category:Brick_Gothic"
-                },
-                "Brickworks": {
-                  "name": "Brickworks",
-                  "href": "/wiki/Category:Brickworks"
-                },
-                "Brick manufacturers": {
-                  "name": "Brick manufacturers",
-                  "href": "/wiki/Category:Brick_manufacturers",
-                  "Brickworks": {
-                    "name": "Brickworks",
-                    "href": "/wiki/Category:Brickworks"
-                  }
-                }
-              },
-              "Glass-ceramics": {
-                "name": "Glass-ceramics",
-                "href": "/wiki/Category:Glass-ceramics"
-              },
-              "High-temperature superconductors": {
-                "name": "High-temperature superconductors",
-                "href": "/wiki/Category:High-temperature_superconductors"
-              },
-              "Porcelain": {
-                "name": "Porcelain",
-                "href": "/wiki/Category:Porcelain",
-                "British porcelain": {
-                  "name": "British porcelain",
-                  "href": "/wiki/Category:British_porcelain"
-                },
-                "Chinese porcelain": {
-                  "name": "Chinese porcelain",
-                  "href": "/wiki/Category:Chinese_porcelain"
-                },
-                "Danish porcelain": {
-                  "name": "Danish porcelain",
-                  "href": "/wiki/Category:Danish_porcelain"
-                },
-                "German porcelain": {
-                  "name": "German porcelain",
-                  "href": "/wiki/Category:German_porcelain"
-                },
-                "Japanese porcelain": {
-                  "name": "Japanese porcelain",
-                  "href": "/wiki/Category:Japanese_porcelain"
-                },
-                "Laboratory porcelainware": {
-                  "name": "Laboratory porcelainware",
-                  "href": "/wiki/Category:Laboratory_porcelainware"
-                },
-                "Lithophane": {
-                  "name": "Lithophane",
-                  "href": "/wiki/Category:Lithophane"
-                },
-                "Ceramics manufacturers": {
-                  "name": "Ceramics manufacturers",
-                  "href": "/wiki/Category:Ceramics_manufacturers"
-                },
-                "Porcelain of France": {
-                  "name": "Porcelain of France",
-                  "href": "/wiki/Category:Porcelain_of_France"
-                },
-                "Porcelain sculptures": {
-                  "name": "Porcelain sculptures",
-                  "href": "/wiki/Category:Porcelain_sculptures"
-                },
-                "Tableware": {
-                  "name": "Tableware",
-                  "href": "/wiki/Category:Tableware"
-                },
-                "Porcelain of the United States": {
-                  "name": "Porcelain of the United States",
-                  "href": "/wiki/Category:Porcelain_of_the_United_States"
-                }
-              },
-              "Terracotta": {
-                "name": "Terracotta",
-                "href": "/wiki/Category:Terracotta"
-              }
-            },
-            "Crystals": {
-              "name": "Crystals",
-              "href": "/wiki/Category:Crystals"
-            },
-            "Ice": {
-              "name": "Ice",
-              "href": "/wiki/Category:Ice"
-            },
-            "Metals": {
-              "name": "Metals",
-              "href": "/wiki/Category:Metals"
-            },
-            "Minerals": {
-              "name": "Minerals",
-              "href": "/wiki/Category:Minerals"
-            }
-          },
-          "Crystallographic defects": {
-            "name": "Crystallographic defects",
-            "href": "/wiki/Category:Crystallographic_defects"
-          },
-          "Crystallography organizations": {
-            "name": "Crystallography organizations",
-            "href": "/wiki/Category:Crystallography_organizations"
-          },
-          "Crystallography software": {
-            "name": "Crystallography software",
-            "href": "/wiki/Category:Crystallography_software"
-          },
-          "Crystallographic databases": {
-            "name": "Crystallographic databases",
-            "href": "/wiki/Category:Crystallographic_databases"
-          },
-          "Diffraction": {
-            "name": "Diffraction",
-            "href": "/wiki/Category:Diffraction"
-          },
-          "Honeycombs (geometry)": {
-            "name": "Honeycombs (geometry)",
-            "href": "/wiki/Category:Honeycombs_(geometry)"
-          },
-          "Mineral habits": {
-            "name": "Mineral habits",
-            "href": "/wiki/Category:Mineral_habits"
-          },
-          "Minerals by crystal system": {
-            "name": "Minerals by crystal system",
-            "href": "/wiki/Category:Minerals_by_crystal_system"
-          },
-          "Perovskites": {
-            "name": "Perovskites",
-            "href": "/wiki/Category:Perovskites"
-          },
-          "X-ray crystallography": {
-            "name": "X-ray crystallography",
-            "href": "/wiki/Category:X-ray_crystallography"
-          }
+          "href": "/wiki/Category:Crystallography"
         },
         "Dimensionless numbers of chemistry": {
           "name": "Dimensionless numbers of chemistry",
@@ -555,23 +119,187 @@
       },
       "Atmospheric chemistry": {
         "name": "Atmospheric chemistry",
-        "href": "/wiki/Category:Atmospheric_chemistry"
+        "href": "/wiki/Category:Atmospheric_chemistry",
+        "Atmospheric chemists": {
+          "name": "Atmospheric chemists",
+          "href": "/wiki/Category:Atmospheric_chemists"
+        }
       },
       "Atomic physics": {
         "name": "Atomic physics",
-        "href": "/wiki/Category:Atomic_physics"
+        "href": "/wiki/Category:Atomic_physics",
+        "Atoms": {
+          "name": "Atoms",
+          "href": "/wiki/Category:Atoms"
+        },
+        "Electron": {
+          "name": "Electron",
+          "href": "/wiki/Category:Electron"
+        },
+        "Emission spectroscopy": {
+          "name": "Emission spectroscopy",
+          "href": "/wiki/Category:Emission_spectroscopy"
+        },
+        "Foundational quantum physics": {
+          "name": "Foundational quantum physics",
+          "href": "/wiki/Category:Foundational_quantum_physics"
+        },
+        "Scattering": {
+          "name": "Scattering",
+          "href": "/wiki/Category:Scattering"
+        },
+        "Spectroscopy": {
+          "name": "Spectroscopy",
+          "href": "/wiki/Category:Spectroscopy"
+        }
       },
       "Biochemistry": {
         "name": "Biochemistry",
-        "href": "/wiki/Category:Biochemistry"
+        "href": "/wiki/Category:Biochemistry",
+        "Allelopathic substances": {
+          "name": "Allelopathic substances",
+          "href": "/wiki/Category:Allelopathic_substances"
+        },
+        "Biochemistry methods": {
+          "name": "Biochemistry methods",
+          "href": "/wiki/Category:Biochemistry_methods"
+        },
+        "Biochemistry research institutes": {
+          "name": "Biochemistry research institutes",
+          "href": "/wiki/Category:Biochemistry_research_institutes"
+        },
+        "Biochemists": {
+          "name": "Biochemists",
+          "href": "/wiki/Category:Biochemists"
+        },
+        "Bioinorganic chemistry": {
+          "name": "Bioinorganic chemistry",
+          "href": "/wiki/Category:Bioinorganic_chemistry"
+        },
+        "Biology and pharmacology of chemical elements": {
+          "name": "Biology and pharmacology of chemical elements",
+          "href": "/wiki/Category:Biology_and_pharmacology_of_chemical_elements"
+        },
+        "Bioluminescence": {
+          "name": "Bioluminescence",
+          "href": "/wiki/Category:Bioluminescence"
+        },
+        "Biomolecules": {
+          "name": "Biomolecules",
+          "href": "/wiki/Category:Biomolecules"
+        },
+        "Cellular respiration": {
+          "name": "Cellular respiration",
+          "href": "/wiki/Category:Cellular_respiration"
+        },
+        "Chemical ecology": {
+          "name": "Chemical ecology",
+          "href": "/wiki/Category:Chemical_ecology"
+        },
+        "Chemical pathology": {
+          "name": "Chemical pathology",
+          "href": "/wiki/Category:Chemical_pathology"
+        },
+        "Chemical weapons": {
+          "name": "Chemical weapons",
+          "href": "/wiki/Category:Chemical_weapons"
+        },
+        "Cryobiology": {
+          "name": "Cryobiology",
+          "href": "/wiki/Category:Cryobiology"
+        },
+        "Biochemistry educators": {
+          "name": "Biochemistry educators",
+          "href": "/wiki/Category:Biochemistry_educators"
+        },
+        "Fermentation": {
+          "name": "Fermentation",
+          "href": "/wiki/Category:Fermentation"
+        },
+        "Food chemistry": {
+          "name": "Food chemistry",
+          "href": "/wiki/Category:Food_chemistry"
+        },
+        "Gene expression": {
+          "name": "Gene expression",
+          "href": "/wiki/Category:Gene_expression"
+        },
+        "Glycobiology": {
+          "name": "Glycobiology",
+          "href": "/wiki/Category:Glycobiology"
+        },
+        "Biochemistry literature": {
+          "name": "Biochemistry literature",
+          "href": "/wiki/Category:Biochemistry_literature"
+        },
+        "Medicinal chemistry": {
+          "name": "Medicinal chemistry",
+          "href": "/wiki/Category:Medicinal_chemistry"
+        },
+        "Metabolism": {
+          "name": "Metabolism",
+          "href": "/wiki/Category:Metabolism"
+        },
+        "Molecular biology": {
+          "name": "Molecular biology",
+          "href": "/wiki/Category:Molecular_biology"
+        },
+        "Neurochemistry": {
+          "name": "Neurochemistry",
+          "href": "/wiki/Category:Neurochemistry"
+        },
+        "Photosynthesis": {
+          "name": "Photosynthesis",
+          "href": "/wiki/Category:Photosynthesis"
+        },
+        "Professorships in biochemistry": {
+          "name": "Professorships in biochemistry",
+          "href": "/wiki/Category:Professorships_in_biochemistry"
+        },
+        "Reagents for biochemistry": {
+          "name": "Reagents for biochemistry",
+          "href": "/wiki/Category:Reagents_for_biochemistry"
+        },
+        "Signal transduction": {
+          "name": "Signal transduction",
+          "href": "/wiki/Category:Signal_transduction"
+        },
+        "Biochemistry stubs": {
+          "name": "Biochemistry stubs",
+          "href": "/wiki/Category:Biochemistry_stubs"
+        },
+        "Biochemistry templates": {
+          "name": "Biochemistry templates",
+          "href": "/wiki/Category:Biochemistry_templates"
+        }
       },
       "Chemical bonding": {
         "name": "Chemical bonding",
-        "href": "/wiki/Category:Chemical_bonding"
+        "href": "/wiki/Category:Chemical_bonding",
+        "Chemical bond properties": {
+          "name": "Chemical bond properties",
+          "href": "/wiki/Category:Chemical_bond_properties"
+        },
+        "Intermolecular forces": {
+          "name": "Intermolecular forces",
+          "href": "/wiki/Category:Intermolecular_forces"
+        },
+        "Ions": {
+          "name": "Ions",
+          "href": "/wiki/Category:Ions"
+        }
       },
       "Carbohydrate chemistry": {
         "name": "Carbohydrate chemistry",
-        "href": "/wiki/Category:Carbohydrate_chemistry"
+        "href": "/wiki/Category:Carbohydrate_chemistry",
+        "Carbohydrates": {
+          "name": "Carbohydrates",
+          "href": "/wiki/Category:Carbohydrates"
+        },
+        "Glycopeptides": {
+          "name": "Glycopeptides",
+          "href": "/wiki/Category:Glycopeptides"
+        }
       },
       "Chemical biology": {
         "name": "Chemical biology",
@@ -579,27 +307,99 @@
       },
       "Chemical classification": {
         "name": "Chemical classification",
-        "href": "/wiki/Category:Chemical_classification"
+        "href": "/wiki/Category:Chemical_classification",
+        "Periodic table": {
+          "name": "Periodic table",
+          "href": "/wiki/Category:Periodic_table"
+        }
       },
       "Chemical data pages": {
         "name": "Chemical data pages",
-        "href": "/wiki/Category:Chemical_data_pages"
+        "href": "/wiki/Category:Chemical_data_pages",
+        "Chemical element data pages": {
+          "name": "Chemical element data pages",
+          "href": "/wiki/Category:Chemical_element_data_pages"
+        }
       },
       "Chemical energy": {
         "name": "Chemical energy",
-        "href": "/wiki/Category:Chemical_energy"
+        "href": "/wiki/Category:Chemical_energy",
+        "Chemical energy sources": {
+          "name": "Chemical energy sources",
+          "href": "/wiki/Category:Chemical_energy_sources"
+        }
       },
       "Chemical industry": {
         "name": "Chemical industry",
-        "href": "/wiki/Category:Chemical_industry"
+        "href": "/wiki/Category:Chemical_industry",
+        "Chemical companies": {
+          "name": "Chemical companies",
+          "href": "/wiki/Category:Chemical_companies"
+        },
+        "Chemical disasters": {
+          "name": "Chemical disasters",
+          "href": "/wiki/Category:Chemical_disasters"
+        },
+        "Chemical industry in London": {
+          "name": "Chemical industry in London",
+          "href": "/wiki/Category:Chemical_industry_in_London"
+        },
+        "Chemical industry of India": {
+          "name": "Chemical industry of India",
+          "href": "/wiki/Category:Chemical_industry_of_India"
+        },
+        "Chemical industry trade unions": {
+          "name": "Chemical industry trade unions",
+          "href": "/wiki/Category:Chemical_industry_trade_unions"
+        },
+        "Chemical plants": {
+          "name": "Chemical plants",
+          "href": "/wiki/Category:Chemical_plants"
+        },
+        "Industrial gases": {
+          "name": "Industrial gases",
+          "href": "/wiki/Category:Industrial_gases"
+        },
+        "People in the chemical industry": {
+          "name": "People in the chemical industry",
+          "href": "/wiki/Category:People_in_the_chemical_industry"
+        },
+        "Products of chemical industry": {
+          "name": "Products of chemical industry",
+          "href": "/wiki/Category:Products_of_chemical_industry"
+        },
+        "Chemical industry of Singapore": {
+          "name": "Chemical industry of Singapore",
+          "href": "/wiki/Category:Chemical_industry_of_Singapore"
+        }
       },
       "Cheminformatics": {
         "name": "Cheminformatics",
-        "href": "/wiki/Category:Cheminformatics"
+        "href": "/wiki/Category:Cheminformatics",
+        "Chemical databases": {
+          "name": "Chemical databases",
+          "href": "/wiki/Category:Chemical_databases"
+        },
+        "Chemistry software": {
+          "name": "Chemistry software",
+          "href": "/wiki/Category:Chemistry_software"
+        }
       },
       "Chemistry awards": {
         "name": "Chemistry awards",
-        "href": "/wiki/Category:Chemistry_awards"
+        "href": "/wiki/Category:Chemistry_awards",
+        "Nobel laureates in Chemistry": {
+          "name": "Nobel laureates in Chemistry",
+          "href": "/wiki/Category:Nobel_laureates_in_Chemistry"
+        },
+        "Royal Society of Chemistry awards": {
+          "name": "Royal Society of Chemistry awards",
+          "href": "/wiki/Category:Royal_Society_of_Chemistry_awards"
+        },
+        "Schrödinger Medal recipients": {
+          "name": "Schrödinger Medal recipients",
+          "href": "/wiki/Category:Schr%C3%B6dinger_Medal_recipients"
+        }
       },
       "Chemistry conferences": {
         "name": "Chemistry conferences",
@@ -607,31 +407,223 @@
       },
       "Chemistry events": {
         "name": "Chemistry events",
-        "href": "/wiki/Category:Chemistry_events"
+        "href": "/wiki/Category:Chemistry_events",
+        "Chemistry conferences": {
+          "name": "Chemistry conferences",
+          "href": "/wiki/Category:Chemistry_conferences"
+        }
       },
       "Chemistry software": {
         "name": "Chemistry software",
-        "href": "/wiki/Category:Chemistry_software"
+        "href": "/wiki/Category:Chemistry_software",
+        "Chemical file formats": {
+          "name": "Chemical file formats",
+          "href": "/wiki/Category:Chemical_file_formats"
+        },
+        "Chemistry software for Linux": {
+          "name": "Chemistry software for Linux",
+          "href": "/wiki/Category:Chemistry_software_for_Linux"
+        },
+        "Chromatography software": {
+          "name": "Chromatography software",
+          "href": "/wiki/Category:Chromatography_software"
+        },
+        "Computational chemistry software": {
+          "name": "Computational chemistry software",
+          "href": "/wiki/Category:Computational_chemistry_software"
+        },
+        "Mass spectrometry software": {
+          "name": "Mass spectrometry software",
+          "href": "/wiki/Category:Mass_spectrometry_software"
+        }
       },
       "Chemists": {
         "name": "Chemists",
-        "href": "/wiki/Category:Chemists"
+        "href": "/wiki/Category:Chemists",
+        "Chemists by century": {
+          "name": "Chemists by century",
+          "href": "/wiki/Category:Chemists_by_century"
+        },
+        "Chemists by sub-specialty": {
+          "name": "Chemists by sub-specialty",
+          "href": "/wiki/Category:Chemists_by_sub-specialty"
+        },
+        "Chemists by nationality": {
+          "name": "Chemists by nationality",
+          "href": "/wiki/Category:Chemists_by_nationality"
+        },
+        "African-American chemists": {
+          "name": "African-American chemists",
+          "href": "/wiki/Category:African-American_chemists"
+        },
+        "Chemical engineers": {
+          "name": "Chemical engineers",
+          "href": "/wiki/Category:Chemical_engineers"
+        },
+        "Discoverers of chemical elements": {
+          "name": "Discoverers of chemical elements",
+          "href": "/wiki/Category:Discoverers_of_chemical_elements"
+        },
+        "Fictional chemists": {
+          "name": "Fictional chemists",
+          "href": "/wiki/Category:Fictional_chemists"
+        },
+        "Jewish chemists": {
+          "name": "Jewish chemists",
+          "href": "/wiki/Category:Jewish_chemists"
+        },
+        "Medieval chemists": {
+          "name": "Medieval chemists",
+          "href": "/wiki/Category:Medieval_chemists"
+        },
+        "Nobel laureates in Chemistry": {
+          "name": "Nobel laureates in Chemistry",
+          "href": "/wiki/Category:Nobel_laureates_in_Chemistry"
+        },
+        "Recipients of the Shanti Swarup Bhatnagar Award in Chemical Science": {
+          "name": "Recipients of the Shanti Swarup Bhatnagar Award in Chemical Science",
+          "href": "/wiki/Category:Recipients_of_the_Shanti_Swarup_Bhatnagar_Award_in_Chemical_Science"
+        },
+        "Women chemists": {
+          "name": "Women chemists",
+          "href": "/wiki/Category:Women_chemists"
+        },
+        "Chemist stubs": {
+          "name": "Chemist stubs",
+          "href": "/wiki/Category:Chemist_stubs"
+        }
       },
       "Colloidal chemistry": {
         "name": "Colloidal chemistry",
-        "href": "/wiki/Category:Colloidal_chemistry"
+        "href": "/wiki/Category:Colloidal_chemistry",
+        "Foams": {
+          "name": "Foams",
+          "href": "/wiki/Category:Foams"
+        },
+        "Food emulsifiers": {
+          "name": "Food emulsifiers",
+          "href": "/wiki/Category:Food_emulsifiers"
+        },
+        "Nanoparticles": {
+          "name": "Nanoparticles",
+          "href": "/wiki/Category:Nanoparticles"
+        },
+        "Surfactants": {
+          "name": "Surfactants",
+          "href": "/wiki/Category:Surfactants"
+        }
       },
       "Chemical education": {
         "name": "Chemical education",
-        "href": "/wiki/Category:Chemical_education"
+        "href": "/wiki/Category:Chemical_education",
+        "Chemistry classroom experiments": {
+          "name": "Chemistry classroom experiments",
+          "href": "/wiki/Category:Chemistry_classroom_experiments"
+        },
+        "Chemical education journals": {
+          "name": "Chemical education journals",
+          "href": "/wiki/Category:Chemical_education_journals"
+        }
       },
       "Chemical engineering": {
         "name": "Chemical engineering",
-        "href": "/wiki/Category:Chemical_engineering"
+        "href": "/wiki/Category:Chemical_engineering",
+        "Biochemical engineering": {
+          "name": "Biochemical engineering",
+          "href": "/wiki/Category:Biochemical_engineering"
+        },
+        "Chemical engineering books": {
+          "name": "Chemical engineering books",
+          "href": "/wiki/Category:Chemical_engineering_books"
+        },
+        "Chemical engineering organizations": {
+          "name": "Chemical engineering organizations",
+          "href": "/wiki/Category:Chemical_engineering_organizations"
+        },
+        "Chemical engineering software": {
+          "name": "Chemical engineering software",
+          "href": "/wiki/Category:Chemical_engineering_software"
+        },
+        "Chemical engineering thermodynamics": {
+          "name": "Chemical engineering thermodynamics",
+          "href": "/wiki/Category:Chemical_engineering_thermodynamics"
+        },
+        "Chemical engineers": {
+          "name": "Chemical engineers",
+          "href": "/wiki/Category:Chemical_engineers"
+        },
+        "Chemical process engineering": {
+          "name": "Chemical process engineering",
+          "href": "/wiki/Category:Chemical_process_engineering"
+        },
+        "Chemical product engineering": {
+          "name": "Chemical product engineering",
+          "href": "/wiki/Category:Chemical_product_engineering"
+        },
+        "Chemical reaction engineering": {
+          "name": "Chemical reaction engineering",
+          "href": "/wiki/Category:Chemical_reaction_engineering"
+        },
+        "Electrochemical engineering": {
+          "name": "Electrochemical engineering",
+          "href": "/wiki/Category:Electrochemical_engineering"
+        },
+        "Environmental engineering": {
+          "name": "Environmental engineering",
+          "href": "/wiki/Category:Environmental_engineering"
+        },
+        "Fluid dynamics": {
+          "name": "Fluid dynamics",
+          "href": "/wiki/Category:Fluid_dynamics"
+        },
+        "Green chemistry": {
+          "name": "Green chemistry",
+          "href": "/wiki/Category:Green_chemistry"
+        },
+        "Particle technology": {
+          "name": "Particle technology",
+          "href": "/wiki/Category:Particle_technology"
+        },
+        "Piping": {
+          "name": "Piping",
+          "href": "/wiki/Category:Piping"
+        },
+        "Products of chemical industry": {
+          "name": "Products of chemical industry",
+          "href": "/wiki/Category:Products_of_chemical_industry"
+        },
+        "Tissue engineering": {
+          "name": "Tissue engineering",
+          "href": "/wiki/Category:Tissue_engineering"
+        },
+        "Transport phenomena": {
+          "name": "Transport phenomena",
+          "href": "/wiki/Category:Transport_phenomena"
+        }
       },
       "Environmental chemistry": {
         "name": "Environmental chemistry",
-        "href": "/wiki/Category:Environmental_chemistry"
+        "href": "/wiki/Category:Environmental_chemistry",
+        "Biogeochemistry": {
+          "name": "Biogeochemistry",
+          "href": "/wiki/Category:Biogeochemistry"
+        },
+        "Bioindicators": {
+          "name": "Bioindicators",
+          "href": "/wiki/Category:Bioindicators"
+        },
+        "Chemical accident": {
+          "name": "Chemical accident",
+          "href": "/wiki/Category:Chemical_accident"
+        },
+        "Green chemistry": {
+          "name": "Green chemistry",
+          "href": "/wiki/Category:Green_chemistry"
+        },
+        "Soil contamination": {
+          "name": "Soil contamination",
+          "href": "/wiki/Category:Soil_contamination"
+        }
       },
       "Chemistry experiments": {
         "name": "Chemistry experiments",
@@ -639,7 +631,15 @@
       },
       "Food chemistry": {
         "name": "Food chemistry",
-        "href": "/wiki/Category:Food_chemistry"
+        "href": "/wiki/Category:Food_chemistry",
+        "Coffee chemistry": {
+          "name": "Coffee chemistry",
+          "href": "/wiki/Category:Coffee_chemistry"
+        },
+        "Wine chemistry": {
+          "name": "Wine chemistry",
+          "href": "/wiki/Category:Wine_chemistry"
+        }
       },
       "General chemistry": {
         "name": "General chemistry",
@@ -647,7 +647,43 @@
       },
       "Geochemistry": {
         "name": "Geochemistry",
-        "href": "/wiki/Category:Geochemistry"
+        "href": "/wiki/Category:Geochemistry",
+        "Biogeochemical cycle": {
+          "name": "Biogeochemical cycle",
+          "href": "/wiki/Category:Biogeochemical_cycle"
+        },
+        "Biogeochemistry": {
+          "name": "Biogeochemistry",
+          "href": "/wiki/Category:Biogeochemistry"
+        },
+        "Chemical oceanography": {
+          "name": "Chemical oceanography",
+          "href": "/wiki/Category:Chemical_oceanography"
+        },
+        "Environmental isotopes": {
+          "name": "Environmental isotopes",
+          "href": "/wiki/Category:Environmental_isotopes"
+        },
+        "Geochemical processes": {
+          "name": "Geochemical processes",
+          "href": "/wiki/Category:Geochemical_processes"
+        },
+        "Geochemists": {
+          "name": "Geochemists",
+          "href": "/wiki/Category:Geochemists"
+        },
+        "Geopolymers": {
+          "name": "Geopolymers",
+          "href": "/wiki/Category:Geopolymers"
+        },
+        "Igneous rocks by composition": {
+          "name": "Igneous rocks by composition",
+          "href": "/wiki/Category:Igneous_rocks_by_composition"
+        },
+        "Soil chemistry": {
+          "name": "Soil chemistry",
+          "href": "/wiki/Category:Soil_chemistry"
+        }
       },
       "Green chemistry": {
         "name": "Green chemistry",
@@ -655,43 +691,495 @@
       },
       "History of chemistry": {
         "name": "History of chemistry",
-        "href": "/wiki/Category:History_of_chemistry"
+        "href": "/wiki/Category:History_of_chemistry",
+        "Alchemy": {
+          "name": "Alchemy",
+          "href": "/wiki/Category:Alchemy"
+        },
+        "Atomism": {
+          "name": "Atomism",
+          "href": "/wiki/Category:Atomism"
+        },
+        "Discoverers of chemical elements": {
+          "name": "Discoverers of chemical elements",
+          "href": "/wiki/Category:Discoverers_of_chemical_elements"
+        },
+        "Islamic chemistry": {
+          "name": "Islamic chemistry",
+          "href": "/wiki/Category:Islamic_chemistry"
+        },
+        "Chemistry timelines": {
+          "name": "Chemistry timelines",
+          "href": "/wiki/Category:Chemistry_timelines"
+        }
       },
       "Chemistry images": {
         "name": "Chemistry images",
-        "href": "/wiki/Category:Chemistry_images"
+        "href": "/wiki/Category:Chemistry_images",
+        "Chemical images that should be in SVG format": {
+          "name": "Chemical images that should be in SVG format",
+          "href": "/wiki/Category:Chemical_images_that_should_be_in_SVG_format"
+        },
+        "Classified Chemical Structures": {
+          "name": "Classified Chemical Structures",
+          "href": "/wiki/Category:Classified_Chemical_Structures"
+        },
+        "PD chem": {
+          "name": "PD chem",
+          "href": "/wiki/Category:PD_chem"
+        },
+        "Unclassified Chemical Structures": {
+          "name": "Unclassified Chemical Structures",
+          "href": "/wiki/Category:Unclassified_Chemical_Structures"
+        }
       },
       "Industrial gases": {
         "name": "Industrial gases",
-        "href": "/wiki/Category:Industrial_gases"
+        "href": "/wiki/Category:Industrial_gases",
+        "Aerosol propellants": {
+          "name": "Aerosol propellants",
+          "href": "/wiki/Category:Aerosol_propellants"
+        },
+        "Arc welding": {
+          "name": "Arc welding",
+          "href": "/wiki/Category:Arc_welding"
+        },
+        "Breathing gases": {
+          "name": "Breathing gases",
+          "href": "/wiki/Category:Breathing_gases"
+        },
+        "Carbon dioxide": {
+          "name": "Carbon dioxide",
+          "href": "/wiki/Category:Carbon_dioxide"
+        },
+        "Carbon monoxide": {
+          "name": "Carbon monoxide",
+          "href": "/wiki/Category:Carbon_monoxide"
+        },
+        "Cryogenics": {
+          "name": "Cryogenics",
+          "href": "/wiki/Category:Cryogenics"
+        },
+        "Diatomic nonmetals": {
+          "name": "Diatomic nonmetals",
+          "href": "/wiki/Category:Diatomic_nonmetals"
+        },
+        "Dielectric gases": {
+          "name": "Dielectric gases",
+          "href": "/wiki/Category:Dielectric_gases"
+        },
+        "Fuel gas": {
+          "name": "Fuel gas",
+          "href": "/wiki/Category:Fuel_gas"
+        },
+        "Hydrogen infrastructure": {
+          "name": "Hydrogen infrastructure",
+          "href": "/wiki/Category:Hydrogen_infrastructure"
+        },
+        "Hydrogen storage": {
+          "name": "Hydrogen storage",
+          "href": "/wiki/Category:Hydrogen_storage"
+        },
+        "Hydrogen technologies": {
+          "name": "Hydrogen technologies",
+          "href": "/wiki/Category:Hydrogen_technologies"
+        },
+        "Noble gases": {
+          "name": "Noble gases",
+          "href": "/wiki/Category:Noble_gases"
+        },
+        "Refrigerants": {
+          "name": "Refrigerants",
+          "href": "/wiki/Category:Refrigerants"
+        },
+        "Synthetic fuel technologies": {
+          "name": "Synthetic fuel technologies",
+          "href": "/wiki/Category:Synthetic_fuel_technologies"
+        }
       },
       "Inorganic chemistry": {
         "name": "Inorganic chemistry",
-        "href": "/wiki/Category:Inorganic_chemistry"
+        "href": "/wiki/Category:Inorganic_chemistry",
+        "Allotropy": {
+          "name": "Allotropy",
+          "href": "/wiki/Category:Allotropy"
+        },
+        "Bioinorganic chemistry": {
+          "name": "Bioinorganic chemistry",
+          "href": "/wiki/Category:Bioinorganic_chemistry"
+        },
+        "Coordination chemistry": {
+          "name": "Coordination chemistry",
+          "href": "/wiki/Category:Coordination_chemistry"
+        },
+        "Glass chemistry": {
+          "name": "Glass chemistry",
+          "href": "/wiki/Category:Glass_chemistry"
+        },
+        "Inorganic chemistry journals": {
+          "name": "Inorganic chemistry journals",
+          "href": "/wiki/Category:Inorganic_chemistry_journals"
+        },
+        "Inorganic chemists": {
+          "name": "Inorganic chemists",
+          "href": "/wiki/Category:Inorganic_chemists"
+        },
+        "Inorganic compounds": {
+          "name": "Inorganic compounds",
+          "href": "/wiki/Category:Inorganic_compounds"
+        },
+        "Inorganic molecular formulas": {
+          "name": "Inorganic molecular formulas",
+          "href": "/wiki/Category:Inorganic_molecular_formulas"
+        },
+        "Inorganic reactions": {
+          "name": "Inorganic reactions",
+          "href": "/wiki/Category:Inorganic_reactions"
+        },
+        "Isomerism": {
+          "name": "Isomerism",
+          "href": "/wiki/Category:Isomerism"
+        },
+        "Medicinal inorganic chemistry": {
+          "name": "Medicinal inorganic chemistry",
+          "href": "/wiki/Category:Medicinal_inorganic_chemistry"
+        },
+        "Organometallic chemistry": {
+          "name": "Organometallic chemistry",
+          "href": "/wiki/Category:Organometallic_chemistry"
+        }
       },
       "Laboratory techniques": {
         "name": "Laboratory techniques",
-        "href": "/wiki/Category:Laboratory_techniques"
+        "href": "/wiki/Category:Laboratory_techniques",
+        "Air-free techniques": {
+          "name": "Air-free techniques",
+          "href": "/wiki/Category:Air-free_techniques"
+        },
+        "Biochemistry methods": {
+          "name": "Biochemistry methods",
+          "href": "/wiki/Category:Biochemistry_methods"
+        },
+        "Centrifugation": {
+          "name": "Centrifugation",
+          "href": "/wiki/Category:Centrifugation"
+        },
+        "Chemical tests": {
+          "name": "Chemical tests",
+          "href": "/wiki/Category:Chemical_tests"
+        },
+        "Chromatography": {
+          "name": "Chromatography",
+          "href": "/wiki/Category:Chromatography"
+        },
+        "Cleanroom technology": {
+          "name": "Cleanroom technology",
+          "href": "/wiki/Category:Cleanroom_technology"
+        },
+        "Distillation": {
+          "name": "Distillation",
+          "href": "/wiki/Category:Distillation"
+        },
+        "Electrophoresis": {
+          "name": "Electrophoresis",
+          "href": "/wiki/Category:Electrophoresis"
+        },
+        "Flow cytometry": {
+          "name": "Flow cytometry",
+          "href": "/wiki/Category:Flow_cytometry"
+        },
+        "Instrumental analysis": {
+          "name": "Instrumental analysis",
+          "href": "/wiki/Category:Instrumental_analysis"
+        },
+        "Microbiology techniques": {
+          "name": "Microbiology techniques",
+          "href": "/wiki/Category:Microbiology_techniques"
+        },
+        "Microscopy": {
+          "name": "Microscopy",
+          "href": "/wiki/Category:Microscopy"
+        },
+        "Molecular biology techniques": {
+          "name": "Molecular biology techniques",
+          "href": "/wiki/Category:Molecular_biology_techniques"
+        },
+        "Polymerase chain reaction": {
+          "name": "Polymerase chain reaction",
+          "href": "/wiki/Category:Polymerase_chain_reaction"
+        },
+        "Protein imaging": {
+          "name": "Protein imaging",
+          "href": "/wiki/Category:Protein_imaging"
+        },
+        "Protein-protein interaction assays": {
+          "name": "Protein-protein interaction assays",
+          "href": "/wiki/Category:Protein%E2%80%93protein_interaction_assays"
+        }
       },
       "Chemistry-related lists": {
         "name": "Chemistry-related lists",
-        "href": "/wiki/Category:Chemistry-related_lists"
+        "href": "/wiki/Category:Chemistry-related_lists",
+        "Dictionary of chemical formulas": {
+          "name": "Dictionary of chemical formulas",
+          "href": "/wiki/Category:Dictionary_of_chemical_formulas"
+        },
+        "Drug-related lists": {
+          "name": "Drug-related lists",
+          "href": "/wiki/Category:Drug-related_lists"
+        },
+        "Lists of chemical elements": {
+          "name": "Lists of chemical elements",
+          "href": "/wiki/Category:Lists_of_chemical_elements"
+        },
+        "Lists of ingredients": {
+          "name": "Lists of ingredients",
+          "href": "/wiki/Category:Lists_of_ingredients"
+        },
+        "Lists of isomers of alkanes": {
+          "name": "Lists of isomers of alkanes",
+          "href": "/wiki/Category:Lists_of_isomers_of_alkanes"
+        },
+        "Lists of UN numbers": {
+          "name": "Lists of UN numbers",
+          "href": "/wiki/Category:Lists_of_UN_numbers"
+        }
       },
       "Chemistry literature": {
         "name": "Chemistry literature",
-        "href": "/wiki/Category:Chemistry_literature"
+        "href": "/wiki/Category:Chemistry_literature",
+        "Biochemistry literature": {
+          "name": "Biochemistry literature",
+          "href": "/wiki/Category:Biochemistry_literature"
+        },
+        "Chemistry books": {
+          "name": "Chemistry books",
+          "href": "/wiki/Category:Chemistry_books"
+        },
+        "Chemistry journals": {
+          "name": "Chemistry journals",
+          "href": "/wiki/Category:Chemistry_journals"
+        }
       },
       "Materials science": {
         "name": "Materials science",
-        "href": "/wiki/Category:Materials_science"
+        "href": "/wiki/Category:Materials_science",
+        "Chromism": {
+          "name": "Chromism",
+          "href": "/wiki/Category:Chromism"
+        },
+        "Condensed matter": {
+          "name": "Condensed matter",
+          "href": "/wiki/Category:Condensed_matter"
+        },
+        "Condensed matter physics": {
+          "name": "Condensed matter physics",
+          "href": "/wiki/Category:Condensed_matter_physics"
+        },
+        "Continuum mechanics": {
+          "name": "Continuum mechanics",
+          "href": "/wiki/Category:Continuum_mechanics"
+        },
+        "Crystallographic defects": {
+          "name": "Crystallographic defects",
+          "href": "/wiki/Category:Crystallographic_defects"
+        },
+        "Deformation (mechanics)": {
+          "name": "Deformation (mechanics)",
+          "href": "/wiki/Category:Deformation_(mechanics)"
+        },
+        "Electric and magnetic fields in matter": {
+          "name": "Electric and magnetic fields in matter",
+          "href": "/wiki/Category:Electric_and_magnetic_fields_in_matter"
+        },
+        "Fracture mechanics": {
+          "name": "Fracture mechanics",
+          "href": "/wiki/Category:Fracture_mechanics"
+        },
+        "Glass engineering and science": {
+          "name": "Glass engineering and science",
+          "href": "/wiki/Category:Glass_engineering_and_science"
+        },
+        "Materials science institutes": {
+          "name": "Materials science institutes",
+          "href": "/wiki/Category:Materials_science_institutes"
+        },
+        "Intermolecular forces": {
+          "name": "Intermolecular forces",
+          "href": "/wiki/Category:Intermolecular_forces"
+        },
+        "Magnetic alloys": {
+          "name": "Magnetic alloys",
+          "href": "/wiki/Category:Magnetic_alloys"
+        },
+        "Magnetic ordering": {
+          "name": "Magnetic ordering",
+          "href": "/wiki/Category:Magnetic_ordering"
+        },
+        "Materials degradation": {
+          "name": "Materials degradation",
+          "href": "/wiki/Category:Materials_degradation"
+        },
+        "Materials science awards": {
+          "name": "Materials science awards",
+          "href": "/wiki/Category:Materials_science_awards"
+        },
+        "Materials science journals": {
+          "name": "Materials science journals",
+          "href": "/wiki/Category:Materials_science_journals"
+        },
+        "Materials scientists and engineers": {
+          "name": "Materials scientists and engineers",
+          "href": "/wiki/Category:Materials_scientists_and_engineers"
+        },
+        "Materials testing": {
+          "name": "Materials testing",
+          "href": "/wiki/Category:Materials_testing"
+        },
+        "Mechanical failure": {
+          "name": "Mechanical failure",
+          "href": "/wiki/Category:Mechanical_failure"
+        },
+        "Metallurgy": {
+          "name": "Metallurgy",
+          "href": "/wiki/Category:Metallurgy"
+        },
+        "Metamaterials": {
+          "name": "Metamaterials",
+          "href": "/wiki/Category:Metamaterials"
+        },
+        "Microelectronic and microelectromechanical systems": {
+          "name": "Microelectronic and microelectromechanical systems",
+          "href": "/wiki/Category:Microelectronic_and_microelectromechanical_systems"
+        },
+        "Microtechnology": {
+          "name": "Microtechnology",
+          "href": "/wiki/Category:Microtechnology"
+        },
+        "Nanotechnology": {
+          "name": "Nanotechnology",
+          "href": "/wiki/Category:Nanotechnology"
+        },
+        "Polymer chemistry": {
+          "name": "Polymer chemistry",
+          "href": "/wiki/Category:Polymer_chemistry"
+        },
+        "Polymorphism (materials science)": {
+          "name": "Polymorphism (materials science)",
+          "href": "/wiki/Category:Polymorphism_(materials_science)"
+        },
+        "Porous media": {
+          "name": "Porous media",
+          "href": "/wiki/Category:Porous_media"
+        },
+        "Professorships in metallurgy and materials science": {
+          "name": "Professorships in metallurgy and materials science",
+          "href": "/wiki/Category:Professorships_in_metallurgy_and_materials_science"
+        },
+        "Radiation effects": {
+          "name": "Radiation effects",
+          "href": "/wiki/Category:Radiation_effects"
+        },
+        "Strengthening mechanisms of materials": {
+          "name": "Strengthening mechanisms of materials",
+          "href": "/wiki/Category:Strengthening_mechanisms_of_materials"
+        },
+        "Superconductivity": {
+          "name": "Superconductivity",
+          "href": "/wiki/Category:Superconductivity"
+        },
+        "Thermochromism": {
+          "name": "Thermochromism",
+          "href": "/wiki/Category:Thermochromism"
+        },
+        "Tribology": {
+          "name": "Tribology",
+          "href": "/wiki/Category:Tribology"
+        }
       },
       "Medicinal chemistry": {
         "name": "Medicinal chemistry",
-        "href": "/wiki/Category:Medicinal_chemistry"
+        "href": "/wiki/Category:Medicinal_chemistry",
+        "Drug discovery": {
+          "name": "Drug discovery",
+          "href": "/wiki/Category:Drug_discovery"
+        },
+        "Medicinal chemistry journals": {
+          "name": "Medicinal chemistry journals",
+          "href": "/wiki/Category:Medicinal_chemistry_journals"
+        },
+        "Medicinal inorganic chemistry": {
+          "name": "Medicinal inorganic chemistry",
+          "href": "/wiki/Category:Medicinal_inorganic_chemistry"
+        },
+        "Medicinal radiochemistry": {
+          "name": "Medicinal radiochemistry",
+          "href": "/wiki/Category:Medicinal_radiochemistry"
+        },
+        "Natural products": {
+          "name": "Natural products",
+          "href": "/wiki/Category:Natural_products"
+        },
+        "Pharmacology": {
+          "name": "Pharmacology",
+          "href": "/wiki/Category:Pharmacology"
+        },
+        "Medicinal chemistry stubs": {
+          "name": "Medicinal chemistry stubs",
+          "href": "/wiki/Category:Medicinal_chemistry_stubs"
+        }
       },
       "Metallurgy": {
         "name": "Metallurgy",
-        "href": "/wiki/Category:Metallurgy"
+        "href": "/wiki/Category:Metallurgy",
+        "Archaeometallurgy": {
+          "name": "Archaeometallurgy",
+          "href": "/wiki/Category:Archaeometallurgy"
+        },
+        "Corrosion": {
+          "name": "Corrosion",
+          "href": "/wiki/Category:Corrosion"
+        },
+        "Deoxidizers": {
+          "name": "Deoxidizers",
+          "href": "/wiki/Category:Deoxidizers"
+        },
+        "Fusible alloys": {
+          "name": "Fusible alloys",
+          "href": "/wiki/Category:Fusible_alloys"
+        },
+        "History of metallurgy": {
+          "name": "History of metallurgy",
+          "href": "/wiki/Category:History_of_metallurgy"
+        },
+        "Intermetallics": {
+          "name": "Intermetallics",
+          "href": "/wiki/Category:Intermetallics"
+        },
+        "Metal companies": {
+          "name": "Metal companies",
+          "href": "/wiki/Category:Metal_companies"
+        },
+        "Metallurgical facilities": {
+          "name": "Metallurgical facilities",
+          "href": "/wiki/Category:Metallurgical_facilities"
+        },
+        "Metallurgical industry by country": {
+          "name": "Metallurgical industry by country",
+          "href": "/wiki/Category:Metallurgical_industry_by_country"
+        },
+        "Metallurgical processes": {
+          "name": "Metallurgical processes",
+          "href": "/wiki/Category:Metallurgical_processes"
+        },
+        "Metallurgists": {
+          "name": "Metallurgists",
+          "href": "/wiki/Category:Metallurgists"
+        },
+        "Professorships in metallurgy and materials science": {
+          "name": "Professorships in metallurgy and materials science",
+          "href": "/wiki/Category:Professorships_in_metallurgy_and_materials_science"
+        }
       },
       "Microwave chemistry": {
         "name": "Microwave chemistry",
@@ -699,39 +1187,431 @@
       },
       "Molecular physics": {
         "name": "Molecular physics",
-        "href": "/wiki/Category:Molecular_physics"
+        "href": "/wiki/Category:Molecular_physics",
+        "Electron": {
+          "name": "Electron",
+          "href": "/wiki/Category:Electron"
+        },
+        "Intermolecular forces": {
+          "name": "Intermolecular forces",
+          "href": "/wiki/Category:Intermolecular_forces"
+        },
+        "Luminescence": {
+          "name": "Luminescence",
+          "href": "/wiki/Category:Luminescence"
+        },
+        "Molecular dynamics": {
+          "name": "Molecular dynamics",
+          "href": "/wiki/Category:Molecular_dynamics"
+        },
+        "Molecular electronics": {
+          "name": "Molecular electronics",
+          "href": "/wiki/Category:Molecular_electronics"
+        },
+        "Molecular modelling": {
+          "name": "Molecular modelling",
+          "href": "/wiki/Category:Molecular_modelling"
+        },
+        "Molecular vibration": {
+          "name": "Molecular vibration",
+          "href": "/wiki/Category:Molecular_vibration"
+        },
+        "Molecules": {
+          "name": "Molecules",
+          "href": "/wiki/Category:Molecules"
+        },
+        "Spectroscopy": {
+          "name": "Spectroscopy",
+          "href": "/wiki/Category:Spectroscopy"
+        }
       },
       "Molecules": {
         "name": "Molecules",
-        "href": "/wiki/Category:Molecules"
+        "href": "/wiki/Category:Molecules",
+        "Chemical compounds": {
+          "name": "Chemical compounds",
+          "href": "/wiki/Category:Chemical_compounds"
+        },
+        "Diatomic molecules": {
+          "name": "Diatomic molecules",
+          "href": "/wiki/Category:Diatomic_molecules"
+        },
+        "Homonuclear molecules": {
+          "name": "Homonuclear molecules",
+          "href": "/wiki/Category:Homonuclear_molecules"
+        },
+        "Hypervalent molecules": {
+          "name": "Hypervalent molecules",
+          "href": "/wiki/Category:Hypervalent_molecules"
+        },
+        "Macromolecules": {
+          "name": "Macromolecules",
+          "href": "/wiki/Category:Macromolecules"
+        },
+        "Membrane-active molecules": {
+          "name": "Membrane-active molecules",
+          "href": "/wiki/Category:Membrane-active_molecules"
+        },
+        "Molecular formulas": {
+          "name": "Molecular formulas",
+          "href": "/wiki/Category:Molecular_formulas"
+        },
+        "Molecular geometry": {
+          "name": "Molecular geometry",
+          "href": "/wiki/Category:Molecular_geometry"
+        },
+        "Triatomic molecules": {
+          "name": "Triatomic molecules",
+          "href": "/wiki/Category:Triatomic_molecules"
+        },
+        "Van der Waals molecules": {
+          "name": "Van der Waals molecules",
+          "href": "/wiki/Category:Van_der_Waals_molecules"
+        }
       },
       "Chemical nomenclature": {
         "name": "Chemical nomenclature",
-        "href": "/wiki/Category:Chemical_nomenclature"
+        "href": "/wiki/Category:Chemical_nomenclature",
+        "Chemical formulas": {
+          "name": "Chemical formulas",
+          "href": "/wiki/Category:Chemical_formulas"
+        },
+        "Chemical numbering schemes": {
+          "name": "Chemical numbering schemes",
+          "href": "/wiki/Category:Chemical_numbering_schemes"
+        },
+        "Chemistry prefixes": {
+          "name": "Chemistry prefixes",
+          "href": "/wiki/Category:Chemistry_prefixes"
+        },
+        "Chemistry suffixes": {
+          "name": "Chemistry suffixes",
+          "href": "/wiki/Category:Chemistry_suffixes"
+        }
       },
       "Nuclear chemistry": {
         "name": "Nuclear chemistry",
-        "href": "/wiki/Category:Nuclear_chemistry"
+        "href": "/wiki/Category:Nuclear_chemistry",
+        "Nuclear chemists": {
+          "name": "Nuclear chemists",
+          "href": "/wiki/Category:Nuclear_chemists"
+        },
+        "Fission products": {
+          "name": "Fission products",
+          "href": "/wiki/Category:Fission_products"
+        },
+        "Isotopes": {
+          "name": "Isotopes",
+          "href": "/wiki/Category:Isotopes"
+        },
+        "Nuclear fusion": {
+          "name": "Nuclear fusion",
+          "href": "/wiki/Category:Nuclear_fusion"
+        },
+        "Nuclear magnetic resonance": {
+          "name": "Nuclear magnetic resonance",
+          "href": "/wiki/Category:Nuclear_magnetic_resonance"
+        },
+        "Radioactivity": {
+          "name": "Radioactivity",
+          "href": "/wiki/Category:Radioactivity"
+        },
+        "Radiochemistry": {
+          "name": "Radiochemistry",
+          "href": "/wiki/Category:Radiochemistry"
+        }
       },
       "Organic chemistry": {
         "name": "Organic chemistry",
-        "href": "/wiki/Category:Organic_chemistry"
+        "href": "/wiki/Category:Organic_chemistry",
+        "Organic chemists": {
+          "name": "Organic chemists",
+          "href": "/wiki/Category:Organic_chemists"
+        },
+        "Base catalyzed reactions": {
+          "name": "Base catalyzed reactions",
+          "href": "/wiki/Category:Base_catalyzed_reactions"
+        },
+        "Carbohydrate chemistry": {
+          "name": "Carbohydrate chemistry",
+          "href": "/wiki/Category:Carbohydrate_chemistry"
+        },
+        "Functional groups": {
+          "name": "Functional groups",
+          "href": "/wiki/Category:Functional_groups"
+        },
+        "Isomerism": {
+          "name": "Isomerism",
+          "href": "/wiki/Category:Isomerism"
+        },
+        "Organic compounds": {
+          "name": "Organic compounds",
+          "href": "/wiki/Category:Organic_compounds"
+        },
+        "Organic reactions": {
+          "name": "Organic reactions",
+          "href": "/wiki/Category:Organic_reactions"
+        },
+        "Organic synthesis": {
+          "name": "Organic synthesis",
+          "href": "/wiki/Category:Organic_synthesis"
+        },
+        "Organometallic chemistry": {
+          "name": "Organometallic chemistry",
+          "href": "/wiki/Category:Organometallic_chemistry"
+        },
+        "Physical organic chemistry": {
+          "name": "Physical organic chemistry",
+          "href": "/wiki/Category:Physical_organic_chemistry"
+        },
+        "Reagents for organic chemistry": {
+          "name": "Reagents for organic chemistry",
+          "href": "/wiki/Category:Reagents_for_organic_chemistry"
+        },
+        "Stereochemistry": {
+          "name": "Stereochemistry",
+          "href": "/wiki/Category:Stereochemistry"
+        },
+        "Substituents": {
+          "name": "Substituents",
+          "href": "/wiki/Category:Substituents"
+        },
+        "Total synthesis": {
+          "name": "Total synthesis",
+          "href": "/wiki/Category:Total_synthesis"
+        },
+        "Organic chemistry stubs": {
+          "name": "Organic chemistry stubs",
+          "href": "/wiki/Category:Organic_chemistry_stubs"
+        }
       },
       "Chemistry organizations": {
         "name": "Chemistry organizations",
-        "href": "/wiki/Category:Chemistry_organizations"
+        "href": "/wiki/Category:Chemistry_organizations",
+        "Chemical engineering organizations": {
+          "name": "Chemical engineering organizations",
+          "href": "/wiki/Category:Chemical_engineering_organizations"
+        },
+        "Chemistry trade associations": {
+          "name": "Chemistry trade associations",
+          "href": "/wiki/Category:Chemistry_trade_associations"
+        },
+        "Crystallography organizations": {
+          "name": "Crystallography organizations",
+          "href": "/wiki/Category:Crystallography_organizations"
+        },
+        "Chemistry laboratories": {
+          "name": "Chemistry laboratories",
+          "href": "/wiki/Category:Chemistry_laboratories"
+        },
+        "Chemical research institutes": {
+          "name": "Chemical research institutes",
+          "href": "/wiki/Category:Chemical_research_institutes"
+        },
+        "Chemistry societies": {
+          "name": "Chemistry societies",
+          "href": "/wiki/Category:Chemistry_societies"
+        }
       },
       "Photochemistry": {
         "name": "Photochemistry",
-        "href": "/wiki/Category:Photochemistry"
+        "href": "/wiki/Category:Photochemistry",
+        "Photochemists": {
+          "name": "Photochemists",
+          "href": "/wiki/Category:Photochemists"
+        },
+        "Photosynthesis": {
+          "name": "Photosynthesis",
+          "href": "/wiki/Category:Photosynthesis"
+        },
+        "Ultraviolet radiation": {
+          "name": "Ultraviolet radiation",
+          "href": "/wiki/Category:Ultraviolet_radiation"
+        }
       },
       "Physical chemistry": {
         "name": "Physical chemistry",
-        "href": "/wiki/Category:Physical_chemistry"
+        "href": "/wiki/Category:Physical_chemistry",
+        "Atomic, molecular, and optical physics": {
+          "name": "Atomic, molecular, and optical physics",
+          "href": "/wiki/Category:Atomic,_molecular,_and_optical_physics"
+        },
+        "Chemical kinetics": {
+          "name": "Chemical kinetics",
+          "href": "/wiki/Category:Chemical_kinetics"
+        },
+        "Chemical thermodynamics": {
+          "name": "Chemical thermodynamics",
+          "href": "/wiki/Category:Chemical_thermodynamics"
+        },
+        "Cluster chemistry": {
+          "name": "Cluster chemistry",
+          "href": "/wiki/Category:Cluster_chemistry"
+        },
+        "Electrochemistry": {
+          "name": "Electrochemistry",
+          "href": "/wiki/Category:Electrochemistry"
+        },
+        "Equilibrium chemistry": {
+          "name": "Equilibrium chemistry",
+          "href": "/wiki/Category:Equilibrium_chemistry"
+        },
+        "Gas laws": {
+          "name": "Gas laws",
+          "href": "/wiki/Category:Gas_laws"
+        },
+        "Ions": {
+          "name": "Ions",
+          "href": "/wiki/Category:Ions"
+        },
+        "Physical chemistry journals": {
+          "name": "Physical chemistry journals",
+          "href": "/wiki/Category:Physical_chemistry_journals"
+        },
+        "Molecular vibration": {
+          "name": "Molecular vibration",
+          "href": "/wiki/Category:Molecular_vibration"
+        },
+        "Phases of matter": {
+          "name": "Phases of matter",
+          "href": "/wiki/Category:Phases_of_matter"
+        },
+        "Physical chemists": {
+          "name": "Physical chemists",
+          "href": "/wiki/Category:Physical_chemists"
+        },
+        "Physical organic chemistry": {
+          "name": "Physical organic chemistry",
+          "href": "/wiki/Category:Physical_organic_chemistry"
+        },
+        "Polymer chemistry": {
+          "name": "Polymer chemistry",
+          "href": "/wiki/Category:Polymer_chemistry"
+        },
+        "Quantum chemistry": {
+          "name": "Quantum chemistry",
+          "href": "/wiki/Category:Quantum_chemistry"
+        },
+        "Scattering": {
+          "name": "Scattering",
+          "href": "/wiki/Category:Scattering"
+        },
+        "Spectroscopy": {
+          "name": "Spectroscopy",
+          "href": "/wiki/Category:Spectroscopy"
+        },
+        "Surface science": {
+          "name": "Surface science",
+          "href": "/wiki/Category:Surface_science"
+        },
+        "Thermochemistry": {
+          "name": "Thermochemistry",
+          "href": "/wiki/Category:Thermochemistry"
+        },
+        "Thermodynamics": {
+          "name": "Thermodynamics",
+          "href": "/wiki/Category:Thermodynamics"
+        },
+        "Physical chemistry stubs": {
+          "name": "Physical chemistry stubs",
+          "href": "/wiki/Category:Physical_chemistry_stubs"
+        }
       },
       "Chemical processes": {
         "name": "Chemical processes",
-        "href": "/wiki/Category:Chemical_processes"
+        "href": "/wiki/Category:Chemical_processes",
+        "Alchemical processes": {
+          "name": "Alchemical processes",
+          "href": "/wiki/Category:Alchemical_processes"
+        },
+        "Biodegradation": {
+          "name": "Biodegradation",
+          "href": "/wiki/Category:Biodegradation"
+        },
+        "Catalysis": {
+          "name": "Catalysis",
+          "href": "/wiki/Category:Catalysis"
+        },
+        "Coatings": {
+          "name": "Coatings",
+          "href": "/wiki/Category:Coatings"
+        },
+        "Combustion": {
+          "name": "Combustion",
+          "href": "/wiki/Category:Combustion"
+        },
+        "Corrosion": {
+          "name": "Corrosion",
+          "href": "/wiki/Category:Corrosion"
+        },
+        "Explosives manufacture": {
+          "name": "Explosives manufacture",
+          "href": "/wiki/Category:Explosives_manufacture"
+        },
+        "Extraction (chemistry)": {
+          "name": "Extraction (chemistry)",
+          "href": "/wiki/Category:Extraction_(chemistry)"
+        },
+        "Fluidization": {
+          "name": "Fluidization",
+          "href": "/wiki/Category:Fluidization"
+        },
+        "Foams": {
+          "name": "Foams",
+          "href": "/wiki/Category:Foams"
+        },
+        "Incineration": {
+          "name": "Incineration",
+          "href": "/wiki/Category:Incineration"
+        },
+        "Ionization": {
+          "name": "Ionization",
+          "href": "/wiki/Category:Ionization"
+        },
+        "Natural gas technology": {
+          "name": "Natural gas technology",
+          "href": "/wiki/Category:Natural_gas_technology"
+        },
+        "Oil refining": {
+          "name": "Oil refining",
+          "href": "/wiki/Category:Oil_refining"
+        },
+        "Oil shale technology": {
+          "name": "Oil shale technology",
+          "href": "/wiki/Category:Oil_shale_technology"
+        },
+        "Petroleum technology": {
+          "name": "Petroleum technology",
+          "href": "/wiki/Category:Petroleum_technology"
+        },
+        "Phase transitions": {
+          "name": "Phase transitions",
+          "href": "/wiki/Category:Phase_transitions"
+        },
+        "Process chemicals": {
+          "name": "Process chemicals",
+          "href": "/wiki/Category:Process_chemicals"
+        },
+        "Pyrolysis": {
+          "name": "Pyrolysis",
+          "href": "/wiki/Category:Pyrolysis"
+        },
+        "Chemical synthesis": {
+          "name": "Chemical synthesis",
+          "href": "/wiki/Category:Chemical_synthesis"
+        },
+        "Synthetic fuel technologies": {
+          "name": "Synthetic fuel technologies",
+          "href": "/wiki/Category:Synthetic_fuel_technologies"
+        },
+        "Chemical vapor deposition": {
+          "name": "Chemical vapor deposition",
+          "href": "/wiki/Category:Chemical_vapor_deposition"
+        },
+        "Water technology": {
+          "name": "Water technology",
+          "href": "/wiki/Category:Water_technology"
+        }
       },
       "Professorships in chemistry": {
         "name": "Professorships in chemistry",
@@ -739,7 +1619,27 @@
       },
       "Chemical properties": {
         "name": "Chemical properties",
-        "href": "/wiki/Category:Chemical_properties"
+        "href": "/wiki/Category:Chemical_properties",
+        "Amount of substance": {
+          "name": "Amount of substance",
+          "href": "/wiki/Category:Amount_of_substance"
+        },
+        "Chemical data pages": {
+          "name": "Chemical data pages",
+          "href": "/wiki/Category:Chemical_data_pages"
+        },
+        "Properties of chemical elements": {
+          "name": "Properties of chemical elements",
+          "href": "/wiki/Category:Properties_of_chemical_elements"
+        },
+        "Thermodynamic properties": {
+          "name": "Thermodynamic properties",
+          "href": "/wiki/Category:Thermodynamic_properties"
+        },
+        "Units of chemical measurement": {
+          "name": "Units of chemical measurement",
+          "href": "/wiki/Category:Units_of_chemical_measurement"
+        }
       },
       "Radiochemistry": {
         "name": "Radiochemistry",
@@ -747,27 +1647,195 @@
       },
       "Chemical reactions": {
         "name": "Chemical reactions",
-        "href": "/wiki/Category:Chemical_reactions"
+        "href": "/wiki/Category:Chemical_reactions",
+        "Catalysis": {
+          "name": "Catalysis",
+          "href": "/wiki/Category:Catalysis"
+        },
+        "Chemical reaction engineering": {
+          "name": "Chemical reaction engineering",
+          "href": "/wiki/Category:Chemical_reaction_engineering"
+        },
+        "Hydrogenation": {
+          "name": "Hydrogenation",
+          "href": "/wiki/Category:Hydrogenation"
+        },
+        "Inorganic reactions": {
+          "name": "Inorganic reactions",
+          "href": "/wiki/Category:Inorganic_reactions"
+        },
+        "Methylation": {
+          "name": "Methylation",
+          "href": "/wiki/Category:Methylation"
+        },
+        "Organic reactions": {
+          "name": "Organic reactions",
+          "href": "/wiki/Category:Organic_reactions"
+        },
+        "Reaction mechanisms": {
+          "name": "Reaction mechanisms",
+          "href": "/wiki/Category:Reaction_mechanisms"
+        },
+        "Light reactions": {
+          "name": "Light reactions",
+          "href": "/wiki/Category:Light_reactions"
+        },
+        "Solid-phase synthesis": {
+          "name": "Solid-phase synthesis",
+          "href": "/wiki/Category:Solid-phase_synthesis"
+        },
+        "Chemical synthesis": {
+          "name": "Chemical synthesis",
+          "href": "/wiki/Category:Chemical_synthesis"
+        },
+        "Thermochemistry": {
+          "name": "Thermochemistry",
+          "href": "/wiki/Category:Thermochemistry"
+        },
+        "Chemical reaction stubs": {
+          "name": "Chemical reaction stubs",
+          "href": "/wiki/Category:Chemical_reaction_stubs"
+        }
       },
       "Chemical safety": {
         "name": "Chemical safety",
-        "href": "/wiki/Category:Chemical_safety"
+        "href": "/wiki/Category:Chemical_safety",
+        "Drug safety": {
+          "name": "Drug safety",
+          "href": "/wiki/Category:Drug_safety"
+        },
+        "Explosion protection": {
+          "name": "Explosion protection",
+          "href": "/wiki/Category:Explosion_protection"
+        },
+        "Explosive chemicals": {
+          "name": "Explosive chemicals",
+          "href": "/wiki/Category:Explosive_chemicals"
+        },
+        "Globally Harmonized System": {
+          "name": "Globally Harmonized System",
+          "href": "/wiki/Category:Globally_Harmonized_System"
+        },
+        "Hazardous materials": {
+          "name": "Hazardous materials",
+          "href": "/wiki/Category:Hazardous_materials"
+        },
+        "Industrial hygiene": {
+          "name": "Industrial hygiene",
+          "href": "/wiki/Category:Industrial_hygiene"
+        },
+        "Natural gas safety": {
+          "name": "Natural gas safety",
+          "href": "/wiki/Category:Natural_gas_safety"
+        },
+        "Persistent Organic Pollutants under the Convention on Long-Range Transboundary Air Pollution": {
+          "name": "Persistent Organic Pollutants under the Convention on Long-Range Transboundary Air Pollution",
+          "href": "/wiki/Category:Persistent_Organic_Pollutants_under_the_Convention_on_Long-Range_Transboundary_Air_Pollution"
+        },
+        "Persistent Organic Pollutants under the Stockholm Convention": {
+          "name": "Persistent Organic Pollutants under the Stockholm Convention",
+          "href": "/wiki/Category:Persistent_Organic_Pollutants_under_the_Stockholm_Convention"
+        },
+        "Process safety": {
+          "name": "Process safety",
+          "href": "/wiki/Category:Process_safety"
+        },
+        "Regulation of chemicals": {
+          "name": "Regulation of chemicals",
+          "href": "/wiki/Category:Regulation_of_chemicals"
+        },
+        "United States Chemical Safety and Hazard Investigation Board": {
+          "name": "United States Chemical Safety and Hazard Investigation Board",
+          "href": "/wiki/Category:United_States_Chemical_Safety_and_Hazard_Investigation_Board"
+        }
       },
       "Separation processes": {
         "name": "Separation processes",
-        "href": "/wiki/Category:Separation_processes"
+        "href": "/wiki/Category:Separation_processes",
+        "Centrifugation": {
+          "name": "Centrifugation",
+          "href": "/wiki/Category:Centrifugation"
+        },
+        "Chromatography": {
+          "name": "Chromatography",
+          "href": "/wiki/Category:Chromatography"
+        },
+        "Distillation": {
+          "name": "Distillation",
+          "href": "/wiki/Category:Distillation"
+        },
+        "Electrophoresis": {
+          "name": "Electrophoresis",
+          "href": "/wiki/Category:Electrophoresis"
+        },
+        "Extraction (chemistry)": {
+          "name": "Extraction (chemistry)",
+          "href": "/wiki/Category:Extraction_(chemistry)"
+        },
+        "Filtration": {
+          "name": "Filtration",
+          "href": "/wiki/Category:Filtration"
+        },
+        "Fractionation": {
+          "name": "Fractionation",
+          "href": "/wiki/Category:Fractionation"
+        },
+        "Membrane technology": {
+          "name": "Membrane technology",
+          "href": "/wiki/Category:Membrane_technology"
+        },
+        "Separation processes by phases": {
+          "name": "Separation processes by phases",
+          "href": "/wiki/Category:Separation_processes_by_phases"
+        }
       },
       "Chemistry societies": {
         "name": "Chemistry societies",
-        "href": "/wiki/Category:Chemistry_societies"
+        "href": "/wiki/Category:Chemistry_societies",
+        "American Chemical Society": {
+          "name": "American Chemical Society",
+          "href": "/wiki/Category:American_Chemical_Society"
+        },
+        "Royal Society of Chemistry": {
+          "name": "Royal Society of Chemistry",
+          "href": "/wiki/Category:Royal_Society_of_Chemistry"
+        }
       },
       "Solid-state chemistry": {
         "name": "Solid-state chemistry",
-        "href": "/wiki/Category:Solid-state_chemistry"
+        "href": "/wiki/Category:Solid-state_chemistry",
+        "Non-stoichiometric compounds": {
+          "name": "Non-stoichiometric compounds",
+          "href": "/wiki/Category:Non-stoichiometric_compounds"
+        },
+        "Salts": {
+          "name": "Salts",
+          "href": "/wiki/Category:Salts"
+        },
+        "Semiconductor materials": {
+          "name": "Semiconductor materials",
+          "href": "/wiki/Category:Semiconductor_materials"
+        },
+        "Solid state engineering": {
+          "name": "Solid state engineering",
+          "href": "/wiki/Category:Solid_state_engineering"
+        }
       },
       "Stereochemistry": {
         "name": "Stereochemistry",
-        "href": "/wiki/Category:Stereochemistry"
+        "href": "/wiki/Category:Stereochemistry",
+        "Isomerism": {
+          "name": "Isomerism",
+          "href": "/wiki/Category:Isomerism"
+        },
+        "Molecular geometry": {
+          "name": "Molecular geometry",
+          "href": "/wiki/Category:Molecular_geometry"
+        },
+        "Stereochemists": {
+          "name": "Stereochemists",
+          "href": "/wiki/Category:Stereochemists"
+        }
       },
       "Stoichiometry": {
         "name": "Stoichiometry",
@@ -775,23 +1843,251 @@
       },
       "Chemical structures": {
         "name": "Chemical structures",
-        "href": "/wiki/Category:Chemical_structures"
+        "href": "/wiki/Category:Chemical_structures",
+        "Chemical formulas": {
+          "name": "Chemical formulas",
+          "href": "/wiki/Category:Chemical_formulas"
+        },
+        "Hormones by chemical structure": {
+          "name": "Hormones by chemical structure",
+          "href": "/wiki/Category:Hormones_by_chemical_structure"
+        }
       },
       "Subatomic particles": {
         "name": "Subatomic particles",
-        "href": "/wiki/Category:Subatomic_particles"
+        "href": "/wiki/Category:Subatomic_particles",
+        "Bosons": {
+          "name": "Bosons",
+          "href": "/wiki/Category:Bosons"
+        },
+        "Elementary particles": {
+          "name": "Elementary particles",
+          "href": "/wiki/Category:Elementary_particles"
+        },
+        "Fermions": {
+          "name": "Fermions",
+          "href": "/wiki/Category:Fermions"
+        },
+        "Hadrons": {
+          "name": "Hadrons",
+          "href": "/wiki/Category:Hadrons"
+        },
+        "Hypothetical elementary particles": {
+          "name": "Hypothetical elementary particles",
+          "href": "/wiki/Category:Hypothetical_elementary_particles"
+        },
+        "Hypothetical nuclei": {
+          "name": "Hypothetical nuclei",
+          "href": "/wiki/Category:Hypothetical_nuclei"
+        },
+        "Nucleons": {
+          "name": "Nucleons",
+          "href": "/wiki/Category:Nucleons"
+        },
+        "Onium": {
+          "name": "Onium",
+          "href": "/wiki/Category:Onium"
+        },
+        "Quasiparticles": {
+          "name": "Quasiparticles",
+          "href": "/wiki/Category:Quasiparticles"
+        },
+        "Tachyons": {
+          "name": "Tachyons",
+          "href": "/wiki/Category:Tachyons"
+        }
       },
       "Chemical substances": {
         "name": "Chemical substances",
-        "href": "/wiki/Category:Chemical_substances"
+        "href": "/wiki/Category:Chemical_substances",
+        "Agricultural chemicals": {
+          "name": "Agricultural chemicals",
+          "href": "/wiki/Category:Agricultural_chemicals"
+        },
+        "Alchemical substances": {
+          "name": "Alchemical substances",
+          "href": "/wiki/Category:Alchemical_substances"
+        },
+        "Carcinogens": {
+          "name": "Carcinogens",
+          "href": "/wiki/Category:Carcinogens"
+        },
+        "Catalysts": {
+          "name": "Catalysts",
+          "href": "/wiki/Category:Catalysts"
+        },
+        "Chemical compounds": {
+          "name": "Chemical compounds",
+          "href": "/wiki/Category:Chemical_compounds"
+        },
+        "Chemical numbering schemes": {
+          "name": "Chemical numbering schemes",
+          "href": "/wiki/Category:Chemical_numbering_schemes"
+        },
+        "Chemical substances by utilization": {
+          "name": "Chemical substances by utilization",
+          "href": "/wiki/Category:Chemical_substances_by_utilization"
+        },
+        "Clathrates": {
+          "name": "Clathrates",
+          "href": "/wiki/Category:Clathrates"
+        },
+        "Cleaning products": {
+          "name": "Cleaning products",
+          "href": "/wiki/Category:Cleaning_products"
+        },
+        "Contrast media": {
+          "name": "Contrast media",
+          "href": "/wiki/Category:Contrast_media"
+        },
+        "Explosive chemicals": {
+          "name": "Explosive chemicals",
+          "href": "/wiki/Category:Explosive_chemicals"
+        },
+        "Forensic chemicals": {
+          "name": "Forensic chemicals",
+          "href": "/wiki/Category:Forensic_chemicals"
+        },
+        "Free radicals": {
+          "name": "Free radicals",
+          "href": "/wiki/Category:Free_radicals"
+        },
+        "Fuels": {
+          "name": "Fuels",
+          "href": "/wiki/Category:Fuels"
+        },
+        "Household chemicals": {
+          "name": "Household chemicals",
+          "href": "/wiki/Category:Household_chemicals"
+        },
+        "Industrial gases": {
+          "name": "Industrial gases",
+          "href": "/wiki/Category:Industrial_gases"
+        },
+        "Ions": {
+          "name": "Ions",
+          "href": "/wiki/Category:Ions"
+        },
+        "Light-sensitive chemicals": {
+          "name": "Light-sensitive chemicals",
+          "href": "/wiki/Category:Light-sensitive_chemicals"
+        },
+        "Metals": {
+          "name": "Metals",
+          "href": "/wiki/Category:Metals"
+        },
+        "Chemical mixtures": {
+          "name": "Chemical mixtures",
+          "href": "/wiki/Category:Chemical_mixtures"
+        },
+        "Molecules": {
+          "name": "Molecules",
+          "href": "/wiki/Category:Molecules"
+        },
+        "Oxidizing agents": {
+          "name": "Oxidizing agents",
+          "href": "/wiki/Category:Oxidizing_agents"
+        },
+        "Petroleum products": {
+          "name": "Petroleum products",
+          "href": "/wiki/Category:Petroleum_products"
+        },
+        "Photographic chemicals": {
+          "name": "Photographic chemicals",
+          "href": "/wiki/Category:Photographic_chemicals"
+        },
+        "Polymers": {
+          "name": "Polymers",
+          "href": "/wiki/Category:Polymers"
+        },
+        "Process chemicals": {
+          "name": "Process chemicals",
+          "href": "/wiki/Category:Process_chemicals"
+        },
+        "Products of chemical industry": {
+          "name": "Products of chemical industry",
+          "href": "/wiki/Category:Products_of_chemical_industry"
+        },
+        "Reagents": {
+          "name": "Reagents",
+          "href": "/wiki/Category:Reagents"
+        },
+        "Reducing agents": {
+          "name": "Reducing agents",
+          "href": "/wiki/Category:Reducing_agents"
+        },
+        "Superconductors": {
+          "name": "Superconductors",
+          "href": "/wiki/Category:Superconductors"
+        },
+        "Teratogens": {
+          "name": "Teratogens",
+          "href": "/wiki/Category:Teratogens"
+        },
+        "Thickening agents": {
+          "name": "Thickening agents",
+          "href": "/wiki/Category:Thickening_agents"
+        },
+        "Toxicants": {
+          "name": "Toxicants",
+          "href": "/wiki/Category:Toxicants"
+        }
       },
       "Supramolecular chemistry": {
         "name": "Supramolecular chemistry",
-        "href": "/wiki/Category:Supramolecular_chemistry"
+        "href": "/wiki/Category:Supramolecular_chemistry",
+        "Clathrates": {
+          "name": "Clathrates",
+          "href": "/wiki/Category:Clathrates"
+        },
+        "Crown ethers": {
+          "name": "Crown ethers",
+          "href": "/wiki/Category:Crown_ethers"
+        },
+        "Dendrimers": {
+          "name": "Dendrimers",
+          "href": "/wiki/Category:Dendrimers"
+        },
+        "Intermolecular forces": {
+          "name": "Intermolecular forces",
+          "href": "/wiki/Category:Intermolecular_forces"
+        },
+        "Molecular machines": {
+          "name": "Molecular machines",
+          "href": "/wiki/Category:Molecular_machines"
+        },
+        "Molecular topology": {
+          "name": "Molecular topology",
+          "href": "/wiki/Category:Molecular_topology"
+        }
       },
       "Chemical synthesis": {
         "name": "Chemical synthesis",
-        "href": "/wiki/Category:Chemical_synthesis"
+        "href": "/wiki/Category:Chemical_synthesis",
+        "Biosynthesis": {
+          "name": "Biosynthesis",
+          "href": "/wiki/Category:Biosynthesis"
+        },
+        "Carbohydrate chemistry": {
+          "name": "Carbohydrate chemistry",
+          "href": "/wiki/Category:Carbohydrate_chemistry"
+        },
+        "Chemical vapour deposition precursors": {
+          "name": "Chemical vapour deposition precursors",
+          "href": "/wiki/Category:Chemical_vapour_deposition_precursors"
+        },
+        "Organic synthesis": {
+          "name": "Organic synthesis",
+          "href": "/wiki/Category:Organic_synthesis"
+        },
+        "Synthetic materials": {
+          "name": "Synthetic materials",
+          "href": "/wiki/Category:Synthetic_materials"
+        },
+        "Total synthesis": {
+          "name": "Total synthesis",
+          "href": "/wiki/Category:Total_synthesis"
+        }
       },
       "Textile chemistry": {
         "name": "Textile chemistry",
@@ -799,7 +2095,31 @@
       },
       "Theoretical chemistry": {
         "name": "Theoretical chemistry",
-        "href": "/wiki/Category:Theoretical_chemistry"
+        "href": "/wiki/Category:Theoretical_chemistry",
+        "Computational chemistry": {
+          "name": "Computational chemistry",
+          "href": "/wiki/Category:Computational_chemistry"
+        },
+        "Mathematical chemistry": {
+          "name": "Mathematical chemistry",
+          "href": "/wiki/Category:Mathematical_chemistry"
+        },
+        "Molecular modelling": {
+          "name": "Molecular modelling",
+          "href": "/wiki/Category:Molecular_modelling"
+        },
+        "Quantum chemistry": {
+          "name": "Quantum chemistry",
+          "href": "/wiki/Category:Quantum_chemistry"
+        },
+        "Theoretical chemists": {
+          "name": "Theoretical chemists",
+          "href": "/wiki/Category:Theoretical_chemists"
+        },
+        "Theoretical chemistry stubs": {
+          "name": "Theoretical chemistry stubs",
+          "href": "/wiki/Category:Theoretical_chemistry_stubs"
+        }
       },
       "Chemistry theories": {
         "name": "Chemistry theories",
@@ -807,19 +2127,143 @@
       },
       "Chemical warfare": {
         "name": "Chemical warfare",
-        "href": "/wiki/Category:Chemical_warfare"
+        "href": "/wiki/Category:Chemical_warfare",
+        "Chemical warfare facilities": {
+          "name": "Chemical warfare facilities",
+          "href": "/wiki/Category:Chemical_warfare_facilities"
+        },
+        "Chemical weapons attacks": {
+          "name": "Chemical weapons attacks",
+          "href": "/wiki/Category:Chemical_weapons_attacks"
+        },
+        "Chemical weapons demilitarization": {
+          "name": "Chemical weapons demilitarization",
+          "href": "/wiki/Category:Chemical_weapons_demilitarization"
+        },
+        "Chemical, biological, radiological and nuclear defense": {
+          "name": "Chemical, biological, radiological and nuclear defense",
+          "href": "/wiki/Category:Chemical,_biological,_radiological_and_nuclear_defense"
+        },
+        "Iraqi chemical weapons program": {
+          "name": "Iraqi chemical weapons program",
+          "href": "/wiki/Category:Iraqi_chemical_weapons_program"
+        },
+        "Military operations involving chemical weapons": {
+          "name": "Military operations involving chemical weapons",
+          "href": "/wiki/Category:Military_operations_involving_chemical_weapons"
+        },
+        "Moscow theater hostage crisis": {
+          "name": "Moscow theater hostage crisis",
+          "href": "/wiki/Category:Moscow_theater_hostage_crisis"
+        },
+        "Chemical weapons in the Syrian Civil War": {
+          "name": "Chemical weapons in the Syrian Civil War",
+          "href": "/wiki/Category:Chemical_weapons_in_the_Syrian_Civil_War"
+        },
+        "Chemical weapons": {
+          "name": "Chemical weapons",
+          "href": "/wiki/Category:Chemical_weapons"
+        },
+        "World War I chemical weapons": {
+          "name": "World War I chemical weapons",
+          "href": "/wiki/Category:World_War_I_chemical_weapons"
+        }
       },
       "Water chemistry": {
         "name": "Water chemistry",
-        "href": "/wiki/Category:Water_chemistry"
+        "href": "/wiki/Category:Water_chemistry",
+        "Hydrates": {
+          "name": "Hydrates",
+          "href": "/wiki/Category:Hydrates"
+        },
+        "Water pollution": {
+          "name": "Water pollution",
+          "href": "/wiki/Category:Water_pollution"
+        }
       },
       "Wikipedia books on chemistry": {
         "name": "Wikipedia books on chemistry",
-        "href": "/wiki/Category:Wikipedia_books_on_chemistry"
+        "href": "/wiki/Category:Wikipedia_books_on_chemistry",
+        "Wikipedia books on chemical elements": {
+          "name": "Wikipedia books on chemical elements",
+          "href": "/wiki/Category:Wikipedia_books_on_chemical_elements"
+        },
+        "Wikipedia books on the periodic table": {
+          "name": "Wikipedia books on the periodic table",
+          "href": "/wiki/Category:Wikipedia_books_on_the_periodic_table"
+        }
       },
       "Chemistry stubs": {
         "name": "Chemistry stubs",
-        "href": "/wiki/Category:Chemistry_stubs"
+        "href": "/wiki/Category:Chemistry_stubs",
+        "Alloy stubs": {
+          "name": "Alloy stubs",
+          "href": "/wiki/Category:Alloy_stubs"
+        },
+        "Analytical chemistry stubs": {
+          "name": "Analytical chemistry stubs",
+          "href": "/wiki/Category:Analytical_chemistry_stubs"
+        },
+        "Biochemistry stubs": {
+          "name": "Biochemistry stubs",
+          "href": "/wiki/Category:Biochemistry_stubs"
+        },
+        "Chemist stubs": {
+          "name": "Chemist stubs",
+          "href": "/wiki/Category:Chemist_stubs"
+        },
+        "Chemical company stubs": {
+          "name": "Chemical company stubs",
+          "href": "/wiki/Category:Chemical_company_stubs"
+        },
+        "Explosives stubs": {
+          "name": "Explosives stubs",
+          "href": "/wiki/Category:Explosives_stubs"
+        },
+        "Hallucinogen stubs": {
+          "name": "Hallucinogen stubs",
+          "href": "/wiki/Category:Hallucinogen_stubs"
+        },
+        "Inorganic compound stubs": {
+          "name": "Inorganic compound stubs",
+          "href": "/wiki/Category:Inorganic_compound_stubs"
+        },
+        "Isotope stubs": {
+          "name": "Isotope stubs",
+          "href": "/wiki/Category:Isotope_stubs"
+        },
+        "Chemistry journal stubs": {
+          "name": "Chemistry journal stubs",
+          "href": "/wiki/Category:Chemistry_journal_stubs"
+        },
+        "Medicinal chemistry stubs": {
+          "name": "Medicinal chemistry stubs",
+          "href": "/wiki/Category:Medicinal_chemistry_stubs"
+        },
+        "Organic chemistry stubs": {
+          "name": "Organic chemistry stubs",
+          "href": "/wiki/Category:Organic_chemistry_stubs"
+        },
+        "Physical chemistry stubs": {
+          "name": "Physical chemistry stubs",
+          "href": "/wiki/Category:Physical_chemistry_stubs"
+        },
+        "Polymer stubs": {
+          "name": "Polymer stubs",
+          "href": "/wiki/Category:Polymer_stubs"
+        },
+        "Chemical reaction stubs": {
+          "name": "Chemical reaction stubs",
+          "href": "/wiki/Category:Chemical_reaction_stubs"
+        },
+        "Theoretical chemistry stubs": {
+          "name": "Theoretical chemistry stubs",
+          "href": "/wiki/Category:Theoretical_chemistry_stubs"
+        },
+        "Alkaloid stubs": {
+          "name": "Alkaloid stubs",
+          "href": "/wiki/Category:Alkaloid_stubs"
+        }
       }
     }
   }

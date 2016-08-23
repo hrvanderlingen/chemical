@@ -5,7 +5,7 @@ namespace Chemical\Service;
 class TreeService
 {
 
-    protected $counter = 0;
+    protected $maxDepth = 2;
     protected $category = array();
     protected $errorMessages = array();
     protected $error = 0;
@@ -25,7 +25,7 @@ class TreeService
 	if ($this->error == 1) {
 	    throw new \Exception(implode(" ", $this->getErrorMessages()));
 	}
-
+	
 	$node = filter_var($nodeData['node'], FILTER_SANITIZE_STRING);
 	$key = $node;
 	$this->iterateChildren($node, $key);
@@ -41,15 +41,16 @@ class TreeService
      */
     protected function iterateChildren($parent, $key)
     {
-	$this->counter++;
-
-	if ($this->counter < 100) {
+	
+	if (substr_count($key, "/") < $this->maxDepth) {
 	    $children = $this->getChildren($parent);
 
 	    foreach ($children as $child) {
-		$newKey = $key . "/" . $child['name'];
+
+		$childStr = (is_array($child) && $child['name']) ? $child['name'] : $child;
+		$newKey = $key . "/" . $childStr;
 		$this->category[$newKey] = $child;
-		$this->iterateChildren($child['name'], $newKey);
+		$this->iterateChildren($childStr, $newKey);
 	    }
 	}
     }

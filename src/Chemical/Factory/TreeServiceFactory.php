@@ -5,6 +5,7 @@ namespace Chemical\Factory;
 use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 use Chemical\Service\WikiTreeService;
+use Chemical\Service\RandomTreeService;
 use Chemical\Service\TreeService;
 
 class treeServiceFactory implements FactoryInterface
@@ -32,6 +33,9 @@ class treeServiceFactory implements FactoryInterface
 	switch ($config['treeSupplier']) {
 	    case "wikipedia":
 		return new WikiTreeService();
+		break;
+	    case "random":
+		return new RandomTreeService();
 		break;
 	    default:
 		$tree = new TreeService();

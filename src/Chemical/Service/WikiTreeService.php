@@ -2,7 +2,7 @@
 
 namespace Chemical\Service;
 
-class WikiTreeService extends TreeService
+class WikiTreeService extends TreeService implements TreeServiceInterface
 {
 
     /**
@@ -11,9 +11,7 @@ class WikiTreeService extends TreeService
     const URL = 'https://en.wikipedia.org/w/api.php';
 
     /**
-     * Get children based on the parent node
-     * @param string $node
-     * @return array
+     * {@inheritdoc}
      */
     public function getChildren($node)
     {

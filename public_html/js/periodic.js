@@ -205,7 +205,7 @@ chemicalApp.controller('TreeCtrl', function ($scope, TreeData) {
             $scope.data = results.data;
             $scope.error = 1;
         });
-    }
+    };
 
 });
 
