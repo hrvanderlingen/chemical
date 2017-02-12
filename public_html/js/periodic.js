@@ -1,4 +1,4 @@
-var chemicalApp = angular.module('chemicalApp', ['ngSanitize', 'ngRoute', 'schemaForm']);
+var chemicalApp = angular.module('chemicalApp', [ 'schemaForm' , 'ngSanitize' , 'ngRoute']);
 
 
 chemicalApp.controller('TableDataCtrl', function ($scope, TableData) {
@@ -180,17 +180,15 @@ chemicalApp.controller('SynonymCtrl', function ($scope, SynonymData) {
 
     $scope.onSubmit = function (form) {
         $scope.$broadcast('schemaFormValidate');
-        if (form.$invalid) {
-            $scope.errorMessage = 'This is not a valid InChi key';
-            return false;
-        }
+        if (form.$valid) {           
+            inchi = $scope.model.inchi;
 
-        inchi = form.inchi.$viewValue;
+            SynonymData.getSynonym(inchi, function (data) {
+                $scope.synonyms = data;
 
-        SynonymData.getSynonym(inchi, function (data) {
-            $scope.synonyms = data;
-
-        });
+            });
+          
+        }      
     }
 });
 
@@ -200,7 +198,7 @@ chemicalApp.controller('TemperatureCtrl', function ($scope, TemperatureDataByGet
     $scope.schema = {
         type: "object",
         properties: {
-            kelvin: {type: "string", minLength: 1, maxLength: 5, title: "Kelvin", description: "Temperature in Kelvin"},
+            kelvin: {type: "integer", minLength: 1, maxLength: 5, title: "Kelvin", description: "Temperature in Kelvin"},
         }
     };
 
@@ -220,7 +218,8 @@ chemicalApp.controller('TemperatureCtrl', function ($scope, TemperatureDataByGet
 
         // Then we check if the form is valid
         if (form.$valid) {
-            kelvin = form.kelvin.$viewValue;
+            
+            kelvin = $scope.model.kelvin;
 
             TemperatureDataByGet.getTemperature(kelvin, function (results) {
                 $scope.data = results.data;
