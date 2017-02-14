@@ -7,11 +7,11 @@
 
             </ul>
 
-
+<form name="synForm" sf-schema="schema" sf-form="form" sf-model="model"></form>
 
             <div class="rows" ng-repeat="row in elements">
 
-                <div class="{{element.className}} order_{{element.position}}"  draggable ng-repeat="element in row | filter:search:strict">
+                <div class="{{element.className}} order_{{element.position}}"  draggable ng-repeat="element in row | filter:model:strict">
                     <p>{{element.small}}</p>
 
                 </div>

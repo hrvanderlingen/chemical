@@ -18,7 +18,7 @@ class IndexController extends AbstractActionController
          * File served from module public_html folder
          * http://ocramius.github.io/blog/asset-manager-for-zend-framework-2/
          */
-     
+       $renderer->headScript()->appendFile('/js/periodic.config.js');
         $renderer->headScript()->appendFile('/js/periodic.js');
         $renderer->headLink()->appendStylesheet('/css/periodic.css');
         $viewModel->setTemplate('chemical/index/index.phtml');

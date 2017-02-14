@@ -1,12 +1,29 @@
-var chemicalApp = angular.module('chemicalApp', [ 'schemaForm' , 'ngSanitize' , 'ngRoute']);
+var chemicalApp = angular.module('chemicalApp', ['schemaForm', 'ngSanitize', 'ngRoute', 'periodic.config']);
 
 
 chemicalApp.controller('TableDataCtrl', function ($scope, TableData) {
-   
+
     // populate the form with data
     //$scope.model = {"element" :"Ne"};
 
     $scope.elements = [];
+
+
+    $scope.schema = {
+        type: "object",
+        properties: {
+            element: {type: "string", minLength: 1, maxLength: 2, title: "Element", description: "Element name"},
+        }
+    };
+
+    $scope.form = [
+        "element",
+        {
+            type: "submit",
+            title: "Go"
+        }
+    ];
+
 
     TableData.periodicData(function (data) {
 
@@ -137,7 +154,15 @@ chemicalApp.factory('SynonymData', function ($http) {
 chemicalApp.factory('TemperatureData', function ($http) {
     return {
         getTemperature: function (kelvin, callback) {
-            $http.post('http://orinoco.vander-lingen.nl/chemistry/rest/kelvin/200', {kelvin: kelvin}).success(callback);
+            
+            var req = {
+                method: 'POST',
+                url: 'http://orinoco.vander-lingen.nl/chemistry/rest/kelvin',
+                headers: {'content-type': undefined},
+                data: 'kelvin=' + kelvin
+            }
+                        
+            $http(req).success(callback);
         }
     };
 });
@@ -150,47 +175,52 @@ chemicalApp.factory('TemperatureDataByGet', function ($http) {
     };
 });
 
-chemicalApp.controller('SynonymCtrl', function ($scope, SynonymData) {
+chemicalApp.controller('SynonymCtrl', ['$scope', 'SynonymData', 'messages', function  ($scope, SynonymData, messages) {
     $scope.message = 'The synonyms for ';
     $scope.inchi = "LFQSCWFLJHTTHZ-UHFFFAOYSA-N";
 
-
-      $scope.schema = {
+$scope.sfOptions = { validationMessage: messages};
+  
+    $scope.schema = {
         type: "object",
         properties: {
             inchi: {
-                type: "string",              
+                type: "string",
                 minLength: 10,
-                maxLength: 50, 
-                title: "Inchi", 
+
+                maxLength: 50,
+
+                title: "Inchi",
                 description: "Inchi"},
         }
     };
 
+
     $scope.form = [
+
         "inchi",
         {
             type: "submit",
-            title: "Go"
+            title: "Go",
+
         }
     ];
-    
-    $scope.model = {inchi : "LFQSCWFLJHTTHZ-UHFFFAOYSA-N"};
 
+    $scope.model = {inchi: "LFQSCWFLJHTTHZ-UHFFFAOYSA-N"};
 
     $scope.onSubmit = function (form) {
         $scope.$broadcast('schemaFormValidate');
-        if (form.$valid) {           
+        if (form.$valid) {
             inchi = $scope.model.inchi;
 
             SynonymData.getSynonym(inchi, function (data) {
                 $scope.synonyms = data;
 
             });
-          
-        }      
+
+        }
     }
-});
+}]);
 
 
 chemicalApp.controller('TemperatureCtrl', function ($scope, TemperatureDataByGet) {
@@ -209,8 +239,8 @@ chemicalApp.controller('TemperatureCtrl', function ($scope, TemperatureDataByGet
             title: "Go"
         }
     ];
-    
-    $scope.model = {kelvin : 900};
+
+    $scope.model = {kelvin: 900};
 
     $scope.onSubmit = function (form) {
         // First we broadcast an event so all fields validate themselves
@@ -218,7 +248,7 @@ chemicalApp.controller('TemperatureCtrl', function ($scope, TemperatureDataByGet
 
         // Then we check if the form is valid
         if (form.$valid) {
-            
+
             kelvin = $scope.model.kelvin;
 
             TemperatureDataByGet.getTemperature(kelvin, function (results) {

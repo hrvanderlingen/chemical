@@ -31,9 +31,11 @@ class RestController extends AbstractRestfulController
     public function create($data)
     {
 	$headers = array(
-	    'Access-Control-Allow-Origin' => '*'
+	    'Access-Control-Allow-Origin' => '*',
+            'Access-Control-Allow-Methods' => 'POST',
 	);
-	$kelvinScale = $this->params()->fromRoute('id');
+        
+	$kelvinScale = $data['kelvin'];
 	$this->getResponse()->getHeaders()->addHeaders($headers);
 	return new JsonModel(array(
 	    "data" => $this->temperatureService->getTemperatureConversionArray($kelvinScale)));
