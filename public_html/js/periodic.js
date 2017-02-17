@@ -9,22 +9,6 @@ chemicalApp.controller('TableDataCtrl', function ($scope, TableData) {
     $scope.elements = [];
 
 
-    $scope.schema = {
-        type: "object",
-        properties: {
-            element: {type: "string", minLength: 1, maxLength: 2, title: "Element", description: "Element name"},
-        }
-    };
-
-    $scope.form = [
-        "element",
-        {
-            type: "submit",
-            title: "Go"
-        }
-    ];
-
-
     TableData.periodicData(function (data) {
 
         var rows = [];
@@ -157,8 +141,8 @@ chemicalApp.factory('TemperatureData', function ($http) {
             
             var req = {
                 method: 'POST',
-                url: 'http://orinoco.vander-lingen.nl/chemistry/rest/kelvin',
-                headers: {'content-type': undefined},
+                url: 'http://orinoco.localhost/chemistry/rest/kelvin',
+                headers: {'content-type': 'application/x-www-form-urlencoded'},
                 data: 'kelvin=' + kelvin
             }
                         
@@ -223,7 +207,7 @@ $scope.sfOptions = { validationMessage: messages};
 }]);
 
 
-chemicalApp.controller('TemperatureCtrl', function ($scope, TemperatureDataByGet) {
+chemicalApp.controller('TemperatureCtrl', function ($scope, TemperatureData) {
 
     $scope.schema = {
         type: "object",
@@ -251,7 +235,7 @@ chemicalApp.controller('TemperatureCtrl', function ($scope, TemperatureDataByGet
 
             kelvin = $scope.model.kelvin;
 
-            TemperatureDataByGet.getTemperature(kelvin, function (results) {
+            TemperatureData.getTemperature(kelvin, function (results) {
                 $scope.data = results.data;
 
             });
