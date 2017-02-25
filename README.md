@@ -1,1 +1,1 @@
-# chemical
+# Chemistry module demo project
