@@ -109,6 +109,10 @@ chemicalApp.config(function ($routeProvider) {
                 templateUrl: 'pages/temperature.html',
                 controller: 'TemperatureCtrl'
             })
+             .when('/login', {
+                templateUrl: 'pages/login.html',
+                controller: 'LoginCtrl'
+            })
             .otherwise({
                 redirectTo: '/pages/home'
             });
@@ -244,6 +248,60 @@ chemicalApp.controller('TemperatureCtrl', function ($scope, TemperatureData) {
 
 
 
+});
+
+
+chemicalApp.controller('LoginCtrl', function ($scope, Authentication) {
+
+    $scope.schema = {
+        type: "object",
+        properties: {
+            identity: {type: "string", minLength: 5, maxLength: 50, title: "Username", description: "Your username"},
+            credential: {type: "string", minLength: 5, maxLength: 15, title: "Password", description: "Your password"},
+        }
+    };
+
+    $scope.form = [
+        "*",
+        {
+            type: "submit",
+            title: "Go"
+        }
+    ];
+
+    $scope.model = {identity: "hrvanderlingen@gmail.com", credential: "Qwerty123"};
+
+    $scope.onSubmit = function (form) {
+        // First we broadcast an event so all fields validate themselves
+        $scope.$broadcast('schemaFormValidate');
+
+        // Then we check if the form is valid
+        if (form.$valid) {
+
+            identity = $scope.model.identity;
+            credential = $scope.model.credential;
+
+            Authentication.authenticate(identity,credential, function (results) {               
+                sessionStorage.setItem('jwt',results.jwt);
+            });
+        }
+    };
+});
+
+chemicalApp.factory('Authentication', function ($http) {
+    return {
+        authenticate: function (identity, credential, callback) {
+            
+            var req = {
+                method: 'POST',
+                url: 'http://orinoco.localhost/jwt/auth',
+                headers: {'content-type': 'application/x-www-form-urlencoded'},
+                data: 'identity=' + identity + "&credential=" + credential
+            }
+                        
+            $http(req).success(callback);
+        }
+    };
 });
 
 
