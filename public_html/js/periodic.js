@@ -113,6 +113,10 @@ chemicalApp.config(function ($routeProvider) {
                 templateUrl: 'pages/login.html',
                 controller: 'LoginCtrl'
             })
+             .when('/logout', {
+                templateUrl: 'pages/logout.html',
+                controller: 'LogoutCtrl'
+            })
             .otherwise({
                 redirectTo: '/pages/home'
             });
@@ -269,8 +273,6 @@ chemicalApp.controller('LoginCtrl', function ($scope, Authentication) {
         }
     ];
 
-    $scope.model = {identity: "hrvanderlingen@gmail.com", credential: "Qwerty123"};
-
     $scope.onSubmit = function (form) {
         // First we broadcast an event so all fields validate themselves
         $scope.$broadcast('schemaFormValidate');
@@ -281,8 +283,9 @@ chemicalApp.controller('LoginCtrl', function ($scope, Authentication) {
             identity = $scope.model.identity;
             credential = $scope.model.credential;
 
-            Authentication.authenticate(identity,credential, function (results) {               
-                sessionStorage.setItem('jwt',results.jwt);
+            Authentication.authenticate(identity,credential, function (results) {                               
+                sessionStorage.setItem('jwt', results.data.jwt);
+                $scope.loggedin = true;
             });
         }
     };
@@ -290,7 +293,7 @@ chemicalApp.controller('LoginCtrl', function ($scope, Authentication) {
 
 chemicalApp.factory('Authentication', function ($http) {
     return {
-        authenticate: function (identity, credential, callback) {
+        authenticate: function (identity, credential, successCallback) {
             
             var req = {
                 method: 'POST',
@@ -299,9 +302,23 @@ chemicalApp.factory('Authentication', function ($http) {
                 data: 'identity=' + identity + "&credential=" + credential
             }
                         
-            $http(req).success(callback);
+            $http(req).then(successCallback);
         }
     };
+});
+
+chemicalApp.controller('menuCtrl', function ($scope) {
+    var jwt = sessionStorage.getItem('jwt');
+    console.log(jwt);
+    if(jwt){
+        $scope.loggedin = true;
+    } else {
+        $scope.loggedin = false;
+    }
+});
+
+chemicalApp.controller('LogoutCtrl', function ($scope) {
+    sessionStorage.removeItem('jwt');
 });
 
 
