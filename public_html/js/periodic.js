@@ -273,6 +273,9 @@ chemicalApp.controller('LoginCtrl', function ($scope, Authentication) {
         }
     ];
 
+
+    $scope.model = {};
+
     $scope.onSubmit = function (form) {
         // First we broadcast an event so all fields validate themselves
         $scope.$broadcast('schemaFormValidate');
