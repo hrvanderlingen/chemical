@@ -11,16 +11,23 @@
         <script>
 
             var app = angular.module('app', []);
-            app.controller('dataController', ['$scope', '$http', dataController]);
+            app.controller('dataController', ['$scope', '$http', 'superCache',  dataController]);
             app.directive('dummyData', dummyData);
+            app.factory('superCache', ['$cacheFactory', superCache]);
 
-            function dataController($scope, $http) {
+            function dataController($scope, $http,superCache) {
                 $scope.body = 'waiting....';
-                $http.get('https://jsonplaceholder.typicode.com/POSTS/1')
-                        .then(function (response) {
-                    $scope.body = response.data.body;
-                    $scope.title = response.data.title;
-                });
+                article = superCache.get('article');
+                if (article) {
+                    $scope.body = article.body;
+                    $scope.title = article.title;
+                } else {
+                    $http.get('https://jsonplaceholder.typicode.com/POSTS/1').then(function (response) {
+                        $scope.body = response.data.body;
+                        $scope.title = response.data.title;
+                        superCache.put('article', response.data);                       
+                    });
+                }
             }
             
             function dummyData() {
@@ -28,7 +35,11 @@
                     template: ' <h2>{{title}}</h2><p>{{body}}</p>'
                 };
             }
-
+            
+            function superCache($cacheFactory){
+                return $cacheFactory('super-cache');
+            }
+            
         </script>
 
 
