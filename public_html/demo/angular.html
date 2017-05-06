@@ -16,7 +16,7 @@
             app.directive('dummyData', dummyData);
             app.factory('jsonData', jsonData);
             app.constant('dataCacheConfig', {
-                    storageMode: 'memory',
+                    storageMode: 'localStorage',
                     maxAge: 15 * 60 * 1000,
                     cacheFlushInterval: 60 * 60 * 1000,
                     deleteOnExpire: 'aggressive'
@@ -27,12 +27,13 @@
                 promise.then(function (response) {
                     $scope.body = response.data.body;
                     $scope.title = response.data.title;
+                    $scope.status = response.status;
                 });
             }
             
             function dummyData() {
                 return {
-                    template: ' <h2>{{title}}</h2><p>{{body}}</p>'
+                    template: ' <h2>{{title}}</h2><p>{{body}}</p><p>{{status}}</p>'
                 };
             }
             
@@ -45,13 +46,17 @@
                         $http.get('https://jsonplaceholder.typicode.com/POSTS/1', {cache: CacheFactory.get('dataCache')
                         }).then(function(response){
                             deferred.resolve(response);                                                      
+                        }, function(response) {                           
+                            response.data = [];
+                            response.data.title = 'not found';
+                            response.data.body = 'not found';
+                            deferred.resolve(response);                            
                         } );
                         return deferred.promise;
                     }
                 };
             };
-
-                       
+             
         </script>
 
 
