@@ -15,6 +15,12 @@
             app.controller('dataController', ['$scope', '$http', 'jsonData',  dataController]);
             app.directive('dummyData', dummyData);
             app.factory('jsonData', jsonData);
+            app.constant('dataCacheConfig', {
+                    storageMode: 'memory',
+                    maxAge: 15 * 60 * 1000,
+                    cacheFlushInterval: 60 * 60 * 1000,
+                    deleteOnExpire: 'aggressive'
+                });
             
             function dataController($scope, $http,jsonData) {
                 promise = jsonData.getPlaceholder();               
@@ -30,15 +36,10 @@
                 };
             }
             
-            function jsonData($http, $q,  CacheFactory) {
+            function jsonData($http, $q, CacheFactory, dataCacheConfig) {
 
-                CacheFactory('dataCache', {
-                    storageMode: 'localStorage',
-                    maxAge: 15 * 60 * 1000,
-                    cacheFlushInterval: 60 * 60 * 1000,
-                    deleteOnExpire: 'aggressive'
-                });
-                 var deferred = $q.defer();                
+                CacheFactory('dataCache',dataCacheConfig);
+                var deferred = $q.defer();                
                 return {
                     getPlaceholder: function () {
                         $http.get('https://jsonplaceholder.typicode.com/POSTS/1', {cache: CacheFactory.get('dataCache')
