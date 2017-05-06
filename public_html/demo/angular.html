@@ -17,8 +17,8 @@
             app.factory('jsonData', jsonData);
             
             function dataController($scope, $http,jsonData) {
-                
-               jsonData.getPlaceholder(function (response) {
+                promise = jsonData.getPlaceholder();               
+                promise.then(function (response) {
                     $scope.body = response.data.body;
                     $scope.title = response.data.title;
                 });
@@ -30,7 +30,7 @@
                 };
             }
             
-            function jsonData($http, CacheFactory) {
+            function jsonData($http, $q,  CacheFactory) {
 
                 CacheFactory('dataCache', {
                     storageMode: 'localStorage',
@@ -38,11 +38,14 @@
                     cacheFlushInterval: 60 * 60 * 1000,
                     deleteOnExpire: 'aggressive'
                 });
-
+                 var deferred = $q.defer();                
                 return {
-                    getPlaceholder: function (callback) {
+                    getPlaceholder: function () {
                         $http.get('https://jsonplaceholder.typicode.com/POSTS/1', {cache: CacheFactory.get('dataCache')
-                        }).then(callback);
+                        }).then(function(response){
+                            deferred.resolve(response);                                                      
+                        } );
+                        return deferred.promise;
                     }
                 };
             };
