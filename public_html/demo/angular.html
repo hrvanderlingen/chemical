@@ -12,25 +12,16 @@
         <script>
 
             var app = angular.module('app', ['angular-cache']);
-            app.controller('dataController', ['$scope', '$http', 'CacheFactory',  dataController]);
+            app.controller('dataController', ['$scope', '$http', 'jsonData',  dataController]);
             app.directive('dummyData', dummyData);
+            app.factory('jsonData', jsonData);
             
-            function dataController($scope, $http,CacheFactory) {
+            function dataController($scope, $http,jsonData) {
                 
-                CacheFactory('dataCache', {
-                    storageMode: 'localStorage',
-                    maxAge: 15 * 60 * 1000, 
-                    cacheFlushInterval: 60 * 60 * 1000, 
-                    deleteOnExpire: 'aggressive' 
+               jsonData.getPlaceholder(function (response) {
+                    $scope.body = response.data.body;
+                    $scope.title = response.data.title;
                 });
-                
-                $scope.body = 'waiting....';                
-                    $http.get('https://jsonplaceholder.typicode.com/POSTS/1',
-                    {cache: CacheFactory.get('dataCache')
-                } ).then(function (response) {
-                        $scope.body = response.data.body;
-                        $scope.title = response.data.title;                       
-                    });
             }
             
             function dummyData() {
@@ -38,6 +29,24 @@
                     template: ' <h2>{{title}}</h2><p>{{body}}</p>'
                 };
             }
+            
+            function jsonData($http, CacheFactory) {
+
+                CacheFactory('dataCache', {
+                    storageMode: 'localStorage',
+                    maxAge: 15 * 60 * 1000,
+                    cacheFlushInterval: 60 * 60 * 1000,
+                    deleteOnExpire: 'aggressive'
+                });
+
+                return {
+                    getPlaceholder: function (callback) {
+                        $http.get('https://jsonplaceholder.typicode.com/POSTS/1', {cache: CacheFactory.get('dataCache')
+                        }).then(callback);
+                    }
+                };
+            };
+
                        
         </script>
 
