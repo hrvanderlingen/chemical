@@ -12,6 +12,7 @@
 
             var app = angular.module('app', []);
             app.controller('dataController', ['$scope', '$http', dataController]);
+            app.directive('dummyData', dummyData);
 
             function dataController($scope, $http) {
                 $scope.body = 'waiting....';
@@ -21,8 +22,12 @@
                     $scope.title = response.data.title;
                 });
             }
-
-
+            
+            function dummyData() {
+                return {
+                    template: ' <h2>{{title}}</h2><p>{{body}}</p>'
+                };
+            }
 
         </script>
 
@@ -33,12 +38,9 @@
 
             <div ng-controller="dataController">
 
-                <h2>{{title}}</h2> 
-
-                <p>{{body}} </p>  
+                <div dummy-data></div>
 
             </div>     
         </div>
     </body>
 </html>
-
