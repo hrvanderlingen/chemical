@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="utf-8">        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>        
+        <script src="https://code.angularjs.org/1.4.2/angular.min.js"></script>
+
+        <title>Demo page</title>
+
+        <script>
+
+            var app = angular.module('app', []);
+            app.controller('dataController', ['$scope', '$http', dataController]);
+
+            function dataController($scope, $http) {
+                $scope.body = 'waiting....';
+                $http.get('https://jsonplaceholder.typicode.com/POSTS/1')
+                        .then(function (response) {
+                    $scope.body = response.data.body;
+                    $scope.title = response.data.title;
+                });
+            }
+
+
+
+        </script>
+
+
+    </head>
+    <body>       
+        <div ng-app="app">
+
+            <div ng-controller="dataController">
+
+                <h2>{{title}}</h2> 
+
+                <p>{{body}} </p>  
+
+            </div>     
+        </div>
+    </body>
+</html>
+
