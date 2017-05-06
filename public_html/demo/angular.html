@@ -5,29 +5,32 @@
         <meta charset="utf-8">        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>        
         <script src="https://code.angularjs.org/1.4.2/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-cache/4.6.0/angular-cache.min.js"></script>
 
         <title>Demo page</title>
 
         <script>
 
-            var app = angular.module('app', []);
-            app.controller('dataController', ['$scope', '$http', 'superCache',  dataController]);
+            var app = angular.module('app', ['angular-cache']);
+            app.controller('dataController', ['$scope', '$http', 'CacheFactory',  dataController]);
             app.directive('dummyData', dummyData);
-            app.factory('superCache', ['$cacheFactory', superCache]);
-
-            function dataController($scope, $http,superCache) {
-                $scope.body = 'waiting....';
-                article = superCache.get('article');
-                if (article) {
-                    $scope.body = article.body;
-                    $scope.title = article.title;
-                } else {
-                    $http.get('https://jsonplaceholder.typicode.com/POSTS/1').then(function (response) {
+            
+            function dataController($scope, $http,CacheFactory) {
+                
+                CacheFactory('dataCache', {
+                    storageMode: 'localStorage',
+                    maxAge: 15 * 60 * 1000, 
+                    cacheFlushInterval: 60 * 60 * 1000, 
+                    deleteOnExpire: 'aggressive' 
+                });
+                
+                $scope.body = 'waiting....';                
+                    $http.get('https://jsonplaceholder.typicode.com/POSTS/1',
+                    {cache: CacheFactory.get('dataCache')
+                } ).then(function (response) {
                         $scope.body = response.data.body;
-                        $scope.title = response.data.title;
-                        superCache.put('article', response.data);                       
+                        $scope.title = response.data.title;                       
                     });
-                }
             }
             
             function dummyData() {
@@ -35,11 +38,7 @@
                     template: ' <h2>{{title}}</h2><p>{{body}}</p>'
                 };
             }
-            
-            function superCache($cacheFactory){
-                return $cacheFactory('super-cache');
-            }
-            
+                       
         </script>
 
 
