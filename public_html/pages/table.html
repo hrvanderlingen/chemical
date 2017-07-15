@@ -11,7 +11,7 @@
 
             <div class="rows" data-ng-repeat="row in elements">
 
-                <div class="{{element.className}} order_{{element.position}}"  data-draggable data-ng-repeat="element in row | filter:search:strict">
+                <div class="{{element.className}} order_{{element.position}}"  draggable ng-repeat="element in row | filter:search:strict">
                     <p>{{element.small}}</p>
 
                 </div>
