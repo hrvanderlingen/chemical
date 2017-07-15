@@ -13,6 +13,6 @@
     ],
    
     "require": {        
-        "diniska/chemistry": "1.0"      
+        "diniska/chemistry": "@dev"      
     }
 }
