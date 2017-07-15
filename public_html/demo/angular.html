@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="utf-8">        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>        
+        <script src="https://code.angularjs.org/1.4.2/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-cache/4.6.0/angular-cache.min.js"></script>
+
+        <title>Demo page</title>
+
+        <script>
+
+            var app = angular.module('app', ['angular-cache']);
+            app.controller('dataController', ['$scope', '$http', 'jsonData',  dataController]);
+            app.directive('dummyData', dummyData);
+            app.factory('jsonData', jsonData);
+            app.constant('dataCacheConfig', {
+                    storageMode: 'localStorage',
+                    maxAge: 15 * 60 * 1000,
+                    cacheFlushInterval: 60 * 60 * 1000,
+                    deleteOnExpire: 'aggressive'
+                });
+            
+            function dataController($scope, $http,jsonData) {
+                promise = jsonData.getPlaceholder();               
+                promise.then(function (response) {
+                    $scope.body = response.data.body;
+                    $scope.title = response.data.title;
+                    $scope.status = response.status;
+                });
+            }
+            
+            function dummyData() {
+                return {
+                    template: ' <h2>{{title}}</h2><p>{{body}}</p><p>{{status}}</p>'
+                };
+            }
+            
+            function jsonData($http, $q, CacheFactory, dataCacheConfig) {
+
+                CacheFactory('dataCache',dataCacheConfig);
+                var deferred = $q.defer();                
+                return {
+                    getPlaceholder: function () {
+                        $http.get('https://jsonplaceholder.typicode.com/POSTS/1', {cache: CacheFactory.get('dataCache')
+                        }).then(function(response){
+                            deferred.resolve(response);                                                      
+                        }, function(response) {                           
+                            response.data = [];
+                            response.data.title = 'not found';
+                            response.data.body = 'not found';
+                            deferred.resolve(response);                            
+                        } );
+                        return deferred.promise;
+                    }
+                };
+            };
+             
+        </script>
+
+
+    </head>
+    <body>       
+        <div ng-app="app">
+
+            <div ng-controller="dataController">
+
+                <div dummy-data></div>
+
+            </div>     
+        </div>
+    </body>
+</html>

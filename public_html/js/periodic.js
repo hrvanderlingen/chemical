@@ -1,11 +1,16 @@
-var chemicalApp = angular.module('chemicalApp', ['ngSanitize', 'ngRoute']);
+var chemicalApp = angular.module('chemicalApp', ['schemaForm', 'ngSanitize', 'ngRoute', 'periodic.config']);
+
 
 chemicalApp.controller('TableDataCtrl', function ($scope, TableData) {
 
+    // populate the form with data
+    //$scope.model = {"element" :"Ne"};
+
     $scope.elements = [];
 
-    TableData.periodicData(function (input) {
-        data = input.data;
+
+    TableData.periodicData(function (data) {
+
         var rows = [];
         var previousPosition;
 
@@ -13,7 +18,6 @@ chemicalApp.controller('TableDataCtrl', function ($scope, TableData) {
             var i = 0;
             var elems = [];
             elementRow = data.table[row];
-            console.log(row);
 
             for (element in elementRow.elements) {
 
@@ -22,14 +26,10 @@ chemicalApp.controller('TableDataCtrl', function ($scope, TableData) {
                 if (elementObj.small === '57-71') {
                     elementObj.small = '*';
                     elementObj.className = 'elements dummy placeholder';
-                }
-
-                else if (elementObj.small === '89-103') {
+                } else if (elementObj.small === '89-103') {
                     elementObj.small = '**';
                     elementObj.className = 'elements dummy placeholder';
-                }
-
-                else if (elementObj.position !== i) {
+                } else if (elementObj.position !== i) {
 
                     var currentPosition = elementObj.position;
 
@@ -47,6 +47,7 @@ chemicalApp.controller('TableDataCtrl', function ($scope, TableData) {
             }
             rows.push(elems);
         }
+
 
         $scope.elements = rows;
     });
@@ -108,6 +109,14 @@ chemicalApp.config(function ($routeProvider) {
                 templateUrl: 'pages/temperature.html',
                 controller: 'TemperatureCtrl'
             })
+             .when('/login', {
+                templateUrl: 'pages/login.html',
+                controller: 'LoginCtrl'
+            })
+             .when('/logout', {
+                templateUrl: 'pages/logout.html',
+                controller: 'LogoutCtrl'
+            })
             .when('/tree', {
                 templateUrl: 'pages/tree.html'
             })
@@ -123,69 +132,199 @@ chemicalApp.controller('HomeCtrl', function ($scope) {
 
 chemicalApp.factory('TableData', function ($http) {
     return {
-        periodicData: function (successCallback) {
-            $http.get('periodicTable.json').then(successCallback);
+        periodicData: function (callback) {
+            $http.get('periodicTable.json').success(callback);
         }
     };
 });
 
 chemicalApp.factory('SynonymData', function ($http) {
     return {
-        getSynonym: function (inchi, successCallback) {
-            $http.get('http://cts.fiehnlab.ucdavis.edu/service/synonyms/' + inchi).then(successCallback);
+        getSynonym: function (inchi, callback) {
+            $http.get('http://cts.fiehnlab.ucdavis.edu/service/synonyms/' + inchi).success(callback);
         }
     };
 });
 
 chemicalApp.factory('TemperatureData', function ($http) {
     return {
-        getTemperature: function (kelvin, successCallback) {
-            $http.post('http://orinoco.vander-lingen.nl/chemistry/rest/kelvin/200', {kelvin: kelvin}).then(successCallback);
+        getTemperature: function (kelvin, callback) {
+            
+            var req = {
+                method: 'POST',
+                url: 'http://orinoco.localhost/chemistry/rest/kelvin',
+                headers: {'content-type': 'application/x-www-form-urlencoded'},
+                data: 'kelvin=' + kelvin
+            }
+                        
+            $http(req).success(callback);
         }
     };
 });
 
 chemicalApp.factory('TemperatureDataByGet', function ($http) {
     return {
-        getTemperature: function (kelvin, successCallback) {
-            $http.get('http://orinoco.vander-lingen.nl/chemistry/rest/kelvin/' + kelvin).then(successCallback);
+        getTemperature: function (kelvin, callback) {
+            $http.get('http://orinoco.vander-lingen.nl/chemistry/rest/kelvin/' + kelvin).success(callback);
         }
     };
 });
 
-chemicalApp.controller('SynonymCtrl', function ($scope, SynonymData) {
+chemicalApp.controller('SynonymCtrl', ['$scope', 'SynonymData', 'messages', function  ($scope, SynonymData, messages) {
     $scope.message = 'The synonyms for ';
     $scope.inchi = "LFQSCWFLJHTTHZ-UHFFFAOYSA-N";
 
-    $scope.submit = function (form) {
+$scope.sfOptions = { validationMessage: messages};
+  
+    $scope.schema = {
+        type: "object",
+        properties: {
+            inchi: {
+                type: "string",
+                minLength: 10,
 
-        if (form.$invalid) {
-            $scope.errorMessage = 'This is not a valid InChi key';
-            return false;
+                maxLength: 50,
+
+                title: "Inchi",
+                description: "Inchi"},
         }
+    };
 
-        inchi = form.inchi.$viewValue;
 
-        SynonymData.getSynonym(inchi, function (data) {
-            $scope.synonyms = data;
+    $scope.form = [
 
-        });
+        "inchi",
+        {
+            type: "submit",
+            title: "Go",
+
+        }
+    ];
+
+    $scope.model = {inchi: "LFQSCWFLJHTTHZ-UHFFFAOYSA-N"};
+
+    $scope.onSubmit = function (form) {
+        $scope.$broadcast('schemaFormValidate');
+        if (form.$valid) {
+            inchi = $scope.model.inchi;
+
+            SynonymData.getSynonym(inchi, function (data) {
+                $scope.synonyms = data;
+
+            });
+
+        }
     }
-});
+}]);
+
 
 chemicalApp.controller('TemperatureCtrl', function ($scope, TemperatureData) {
 
-    $scope.kelvin = "200";
+    $scope.schema = {
+        type: "object",
+        properties: {
+            kelvin: {type: "integer", minLength: 1, maxLength: 5, title: "Kelvin", description: "Temperature in Kelvin"},
+        }
+    };
 
-    $scope.submit = function (form) {
+    $scope.form = [
+        "kelvin",
+        {
+            type: "submit",
+            title: "Go"
+        }
+    ];
 
-        kelvin = form.kelvin.$viewValue;
+    $scope.model = {kelvin: 900};
 
-        TemperatureData.getTemperature(kelvin, function (results) {
-            $scope.data = results.data;
+    $scope.onSubmit = function (form) {
+        // First we broadcast an event so all fields validate themselves
+        $scope.$broadcast('schemaFormValidate');
 
-        });
+        // Then we check if the form is valid
+        if (form.$valid) {
+
+            kelvin = $scope.model.kelvin;
+
+            TemperatureData.getTemperature(kelvin, function (results) {
+                $scope.data = results.data;
+
+            });
+        }
+    };
+
+
+
+});
+
+
+chemicalApp.controller('LoginCtrl', function ($scope, Authentication) {
+
+    $scope.schema = {
+        type: "object",
+        properties: {
+            identity: {type: "string", minLength: 5, maxLength: 50, title: "Username", description: "Your username"},
+            credential: {type: "string", minLength: 5, maxLength: 15, title: "Password", description: "Your password"},
+        }
+    };
+
+    $scope.form = [
+        "*",
+        {
+            type: "submit",
+            title: "Go"
+        }
+    ];
+
+
+    $scope.model = {};
+
+    $scope.onSubmit = function (form) {
+        // First we broadcast an event so all fields validate themselves
+        $scope.$broadcast('schemaFormValidate');
+
+        // Then we check if the form is valid
+        if (form.$valid) {
+
+            identity = $scope.model.identity;
+            credential = $scope.model.credential;
+
+            Authentication.authenticate(identity,credential, function (results) {                               
+                sessionStorage.setItem('jwt', results.data.jwt);
+                $scope.loggedin = true;
+            });
+        }
+    };
+});
+
+chemicalApp.factory('Authentication', function ($http) {
+    return {
+        authenticate: function (identity, credential, successCallback) {
+            
+            var req = {
+                method: 'POST',
+                url: 'http://orinoco.localhost/jwt/auth',
+                headers: {'content-type': 'application/x-www-form-urlencoded'},
+                data: 'identity=' + identity + "&credential=" + credential
+            }
+                        
+            $http(req).then(successCallback);
+        }
+    };
+});
+
+chemicalApp.controller('menuCtrl', function ($scope) {
+    var jwt = sessionStorage.getItem('jwt');
+    console.log(jwt);
+    if(jwt){
+        $scope.loggedin = true;
+    } else {
+        $scope.loggedin = false;
     }
+});
+
+chemicalApp.controller('LogoutCtrl', function ($scope) {
+    sessionStorage.removeItem('jwt');
 });
 
 
@@ -217,9 +356,6 @@ chemicalApp.factory('TreeData', function ($http) {
         }
     };
 });
-
-
-
 
 
 

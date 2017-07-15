@@ -1,5 +1,16 @@
 <div ng-app="chemicalApp">
 
-<div ng-view></div>
+    <div ng-controller="menuCtrl" class="btn-group" role="group">
+        <a href="#home"  class="btn btn-default">Home</a>
+        <a href="#table"  class="btn btn-default">Table</a>
+        <a href="#synonym" class="btn btn-default">Synonyms</a>
+        <a href="#temperature" class="btn btn-default">Temperature</a>
+        <a href="#login" ng-hide="loggedin" class="btn btn-default">Login</a>
+        <a href="#logout" ng-show="loggedin" class="btn btn-default">Logout</a>
+    </div>
+    <br /><br />
+
+
+    <div ng-view></div>
 
 </div>
