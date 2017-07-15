@@ -10,9 +10,7 @@
             "name": "hrvanderlingen",
             "email": "info@assessmentee.com"
         }
-    ],
+    ]
    
-    "require": {        
-        "diniska/chemistry": "@dev"      
-    }
+   
 }
