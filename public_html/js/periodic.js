@@ -117,6 +117,9 @@ chemicalApp.config(function ($routeProvider) {
                 templateUrl: 'pages/logout.html',
                 controller: 'LogoutCtrl'
             })
+            .when('/tree', {
+                templateUrl: 'pages/tree.html'
+            })
             .otherwise({
                 redirectTo: '/pages/home'
             });
@@ -325,7 +328,34 @@ chemicalApp.controller('LogoutCtrl', function ($scope) {
 });
 
 
+chemicalApp.controller('TreeCtrl', function ($scope, TreeData) {
 
+
+    $scope.node = "stereochemistry";
+
+    $scope.submit = function (form) {
+
+        node = form.node.$viewValue;
+
+        TreeData.getTree(node, function (results) {
+            $scope.data = JSON.stringify(results.data, undefined, 2);
+            $scope.error = 0;
+        }, function (results) {
+            $scope.data = results.data;
+            $scope.error = 1;
+        });
+    };
+
+});
+
+
+chemicalApp.factory('TreeData', function ($http) {
+    return {
+        getTree: function (node, successCallback, errorCallback) {
+            $http.post('/chemistry/tree', {node: node}).then(successCallback).catch(errorCallback);
+        }
+    };
+});
 
 
 

@@ -4,9 +4,9 @@ namespace Chemical\Factory;
 
 use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
-use Chemical\Controller\RestController;
+use Chemical\Controller\TreeController;
 
-abstract class RestControllerFactory implements FactoryInterface
+class TreeControllerFactory implements FactoryInterface
 {
 
     /**
@@ -19,9 +19,9 @@ abstract class RestControllerFactory implements FactoryInterface
     public function createService(ServiceLocatorInterface $serviceLocator)
     {
 	$sl = $serviceLocator->getServiceLocator();
-	$temperatureService = $sl->get('temperatureService');
+	$treeService = $sl->get('treeService');
 
-	return new RestController($temperatureService);
+	return new TreeController($treeService);
     }
 
 }
