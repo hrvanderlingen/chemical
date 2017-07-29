@@ -104,38 +104,4 @@ class XMLTreeService extends TreeService implements TreeServiceInterface
         return $category;
     }
 
-    public function getNode($data)
-    {
-        if ($is_null($data)) {
-
-        } else {
-            $node = $data['node'];
-        }
-
-        $file = __DIR__ . "../../../../data/products.xml";
-
-        if (file_exists($file)) {
-            $xml = simplexml_load_file($file) or die("Error: Cannot create object");
-        } else {
-            throw new \Exception('xml file not foud');
-        }
-
-        print_r($xml->products->product[0]->productCode);
-
-        $products = $xml->products->product[0]->products;
-
-
-        // create a random xml file.
-        $parent = new \SimpleXMLElement('<products/>');
-        $key = 'product';
-        $parent->addAttribute('code', $this->count);
-        $this->count++;
-        $this->iterateChildren($parent, $key);
-        $doc = new \DomDocument('1.0');
-        $doc->preserveWhiteSpace = false;
-        $doc->formatOutput = true;
-        $doc->loadXML($parent->asXML());
-        return $doc->saveXML();
-    }
-
 }
