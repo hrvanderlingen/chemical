@@ -10,5 +10,5 @@ interface TreeServiceInterface
      * @param string $node
      * @return array
      */
-    public function getChildren($node);
+    public function getChildren($node = null);
 }
