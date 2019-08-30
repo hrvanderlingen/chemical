@@ -25,12 +25,33 @@ return array(
                 ),
                 'may_terminate' => true,
                 'child_routes' => array(
+                    'trees' => array(
+                        'type' => 'segment',
+                        'options' => array(
+                            'route' => '/trees[/:sub]',
+                            'defaults' => array(
+                                'controller' => 'Chemical\Controller\IndexController',
+                                'action' => 'index'
+                            ),
+                        ),
+                        'may_terminate' => true,
+                    ),
                     'rest' => array(
                         'type' => 'segment',
                         'options' => array(
-                            'route' => '/rest/kelvin[/:id]',
+                            'route' => '/rest',
                             'defaults' => array(
-                                'controller' => 'rest',
+                                'controller' => 'Rest',
+                                'action' => ''
+                            ),
+                        ),
+                    ),
+                    'rest-tree' => array(
+                        'type' => 'segment',
+                        'options' => array(
+                            'route' => '/rest/tree/:id',
+                            'defaults' => array(
+                                'controller' => 'Rest',
                                 'action' => ''
                             ),
                             'constraints' => array(
@@ -41,20 +62,10 @@ return array(
                     'tree' => array(
                         'type' => 'segment',
                         'options' => array(
-                            'route' => '/tree',
+                            'route' => '/tree[/:action]',
                             'defaults' => array(
-                                'controller' => 'Tree',
-                                'action' => ''
-                            ),
-                        ),
-                    ),
-                    'products' => array(
-                        'type' => 'segment',
-                        'options' => array(
-                            'route' => '/products',
-                            'defaults' => array(
-                                'controller' => 'Product',
-                                'action' => ''
+                                'controller' => 'Chemical\Controller\IndexController',
+                                'action' => 'tree'
                             ),
                         ),
                     ),
@@ -64,20 +75,23 @@ return array(
     ),
     'service_manager' => array(
         'factories' => array(
-            'temperatureService' => 'Chemical\Factory\TemperatureServiceFactory',
-            'treeService' => 'Chemical\Factory\TreeServiceFactory',
+            'treeService' => function($container) {
+                return new Chemical\Service\XMLTreeService( );
+            },
             'xmlTreeService' => 'Chemical\Factory\XMLTreeServiceFactory'
         )
     ),
     'controllers' => array(
-        'invokables' => array(
-            'Chemical\Controller\IndexController'
-            => 'Chemical\Controller\IndexController'
-        ),
+        'invokables' => array(),
         'factories' => array(
-            'Rest' => 'Chemical\Factory\RestControllerFactory',
-            'Tree' => 'Chemical\Factory\TreeControllerFactory',
-            'Product' => 'Chemical\Factory\ProductControllerFactory'
+            Rest::class => function($container) {
+                return new Chemical\Controller\RestController(
+                    $container->get('config'), $container->get('treeService')
+                );
+            },
+            Chemical\Controller\IndexController::class => function($container) {
+                return new Chemical\Controller\IndexController();
+            }
         )
     ),
     'asset_manager' => array(
@@ -87,10 +101,6 @@ return array(
                     "path" => __DIR__ . '/../public_html',
                     "priority" => 100
                 ),
-                array(
-                    "path" => __DIR__ . '/../../../diniska/chemistry/PeriodicalTable',
-                    "priority" => 50
-                )
             ),
         ),
     ),
