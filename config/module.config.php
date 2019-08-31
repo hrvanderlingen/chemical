@@ -59,6 +59,16 @@ return array(
                             )
                         ),
                     ),
+                    'service-tree' => array(
+                        'type' => 'segment',
+                        'options' => array(
+                            'route' => '/rest/service/:id',
+                            'defaults' => array(
+                                'controller' => 'Rest',
+                                'action' => ''
+                            ),
+                        ),
+                    ),
                     'tree' => array(
                         'type' => 'segment',
                         'options' => array(
@@ -78,7 +88,9 @@ return array(
             'treeService' => function($container) {
                 return new Chemical\Service\XMLTreeService( );
             },
-            'xmlTreeService' => 'Chemical\Factory\XMLTreeServiceFactory'
+            'jwtService' => function($container) {
+                return new Chemical\Service\JwtService( );
+            },
         )
     ),
     'controllers' => array(
@@ -86,7 +98,7 @@ return array(
         'factories' => array(
             Rest::class => function($container) {
                 return new Chemical\Controller\RestController(
-                    $container->get('config'), $container->get('treeService')
+                    $container->get('config'), $container->get('treeService'), $container->get('jwtService')
                 );
             },
             Chemical\Controller\IndexController::class => function($container) {

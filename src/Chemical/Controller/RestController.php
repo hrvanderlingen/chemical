@@ -5,26 +5,26 @@ namespace Chemical\Controller;
 use Zend\Mvc\Controller\AbstractRestfulController;
 use Zend\View\Model\JsonModel;
 use Chemical\Service\TreeService;
+use Chemical\Service\JwtService;
 
 class RestController extends AbstractRestfulController
 {
 
     protected $config;
     protected $treeService;
+    protected $jwtService;
 
-    public function __construct($config, TreeService $treeService)
+    public function __construct($config, TreeService $treeService, JwtService $jwtService)
     {
         $this->config = $config;
         $this->treeService = $treeService;
+        $this->jwtService = $jwtService;
     }
 
     public function get($id)
     {
 
-        $headers = array(
-            'Access-Control-Allow-Origin' => '*',
-            'Access-Control-Allow-Methods' => 'GET',
-        );
+        $headers = $this->getAccessControlHeaders();
 
         $this->getResponse()->getHeaders()->addHeaders($headers);
         $data = [1, 2, 3, 4];
@@ -33,13 +33,10 @@ class RestController extends AbstractRestfulController
 
     public function create($data)
     {
-        $headers = array(
-            'Access-Control-Allow-Origin' => '*',
-            'Access-Control-Allow-Methods' => 'POST',
-        );
+        $headers = $headers = $this->getAccessControlHeaders();
 
-        switch ($data['action']) {
-            case "newTree":
+        switch ($this->getRequest()->getRequestUri()) {
+            case "/chemistry/rest/new-tree":
 
                 $node = ['node' => ''];
                 $data = $this->treeService->getTree($node);
@@ -48,7 +45,7 @@ class RestController extends AbstractRestfulController
                 $response = ['message' => 'tree created'];
                 break;
 
-            case "node":
+            case "/chemistry/rest/node":
 
                 ini_set('memory_limit', '400MB');
 
@@ -67,6 +64,11 @@ class RestController extends AbstractRestfulController
                     $response = ['data' => $product->item(0)->nodeValue];
                 }
                 break;
+            case "/chemistry/rest/service/login":
+
+                $token = $this->jwtService->createToken();
+                $response = ['data' => $token->getPayLoad()];
+                break;
         }
         $this->getResponse()->getHeaders()->addHeaders($headers);
         return new JsonModel($response);
@@ -74,12 +76,17 @@ class RestController extends AbstractRestfulController
 
     public function options()
     {
-        $headers = array(
-            'Access-Control-Allow-Origin' => '*',
-            'Access-Control-Allow-Methods' => 'GET, POST, PUT',
-            'Access-Control-Allow-Headers' => 'content-type'
-        );
+        $headers = $this->getAccessControlHeaders();
         $this->getResponse()->getHeaders()->addHeaders($headers);
+    }
+
+    protected function getAccessControlHeaders()
+    {
+        return $headers = array(
+            'Access-Control-Allow-Origin' => '*',
+            'Access-Control-Allow-Methods' => 'POST,GET',
+            'Access-Control-Allow-Headers' => 'Origin, X-Requested-With, Content-Type, Accept',
+        );
     }
 
 }
