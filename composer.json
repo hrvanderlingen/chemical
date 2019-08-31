@@ -1,7 +1,7 @@
 {
     "name": "hrvanderlingen/chemical",  
     "minimum-stability": "dev",
-    "description": "Angular demo periodic table",
+    "description": "Angular 8 demo",
     "homepage": "https://github.com/hrvanderlingen/chemical",
     "type": "library",
     "license": "MIT",
@@ -10,7 +10,8 @@
             "name": "hrvanderlingen",
             "email": "info@assessmentee.com"
         }
-    ]
-   
-   
+    ],
+     "require": {
+        "lcobucci/jwt": "^4.0@dev"
+    }
 }
