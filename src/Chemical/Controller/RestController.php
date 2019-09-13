@@ -27,7 +27,10 @@ class RestController extends AbstractRestfulController
         $headers = $this->getAccessControlHeaders();
 
         $this->getResponse()->getHeaders()->addHeaders($headers);
-        $data = [1, 2, 3, 4];
+        $data = [];
+        $data[] = ['id' => 1, 'title' => 'a'];
+        $data[] = ['id' => 2, 'title' => 'b'];
+        $data[] = ['id' => 3, 'title' => 'c'];
         return new JsonModel($data);
     }
 
@@ -39,13 +42,13 @@ class RestController extends AbstractRestfulController
             case "/chemistry/rest/new-tree":
 
                 $node = ['node' => ''];
-                $data = $this->treeService->getTree($node);
+                $tree = $this->treeService->getTree($node);
                 ini_set('memory_limit', '400MB');
-                file_put_contents($this->config['treeStore'] . "/new.xml", $data);
+                file_put_contents($this->config['treeStore'] . "/new.xml", $tree);
                 $response = ['message' => 'tree created'];
                 break;
 
-            case "/chemistry/rest/node":
+            case "/chemistry/rest/tree/node":
 
                 ini_set('memory_limit', '400MB');
 
@@ -66,8 +69,37 @@ class RestController extends AbstractRestfulController
                 break;
             case "/chemistry/rest/service/login":
 
-                $token = $this->jwtService->createToken();
-                $response = ['data' => $token->getPayLoad()];
+                $mockCredentials = [
+                    [
+                        'email' => 'test@example.com',
+                        'firstname' => 'Peter',
+                        'lastname' => 'Smith',
+                        'hash' => password_hash('notsosecret', PASSWORD_DEFAULT)
+                    ]
+                ];
+                $validated = false;
+
+                foreach ($mockCredentials as $credential) {
+                    if (password_verify($data['password'], $credential['hash'])) {
+                        $token = $this->jwtService->createToken();
+
+                        $user = [
+                            'username' => $data['username'],
+                            'firstname' => $credential['firstname'],
+                            'lastname' => $credential['lastname'],
+                            'token' => $token->getPayLoad()
+                        ];
+
+                        $response = $user;
+                        $validated = true;
+                        break;
+                    }
+                }
+
+                if (!$validated) {
+                    $response = ['error' => 1];
+                }
+
                 break;
         }
         $this->getResponse()->getHeaders()->addHeaders($headers);
