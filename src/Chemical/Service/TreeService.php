@@ -46,7 +46,6 @@ class TreeService
             $children = $this->getChildren($parent);
 
             foreach ($children as $child) {
-
                 $childStr = (is_array($child) && $child['name']) ? $child['name'] : $child;
                 $newKey = $key . "/" . $childStr;
                 $this->category[$newKey] = $child;
@@ -62,7 +61,9 @@ class TreeService
      */
     protected function isValidJson($json_string)
     {
-        return !preg_match('/[^,:{}\\[\\]0-9.\\-+Eaeflnr-u \\n\\r\\t]/', preg_replace('/"(\\.|[^"\\\\])*"/', '', $json_string));
+        $regex = "/[^,:{}\\[\\]0-9.\\-+Eaeflnr-u \\n\\r\\t]/";
+        $regex2 = '/"(\\.|[^"\\\\])*"/';
+        return !preg_match($regex, preg_replace($regex2, '', $json_string));
     }
 
     /**
@@ -75,8 +76,9 @@ class TreeService
      */
     protected function explodeTree($array, $delimiter = '_', $baseval = false)
     {
-        if (!is_array($array))
+        if (!is_array($array)) {
             return false;
+        }
         $splitRE = '/' . preg_quote($delimiter, '/') . '/';
         $returnArr = array();
         foreach ($array as $key => $val) {
@@ -133,7 +135,7 @@ class TreeService
         return $this->errorMessages;
     }
 
-    function generateRandomString($length = 9)
+    public function generateRandomString($length = 9)
     {
         $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
         $charactersLength = strlen($characters);
@@ -143,5 +145,4 @@ class TreeService
         }
         return $randomString;
     }
-
 }

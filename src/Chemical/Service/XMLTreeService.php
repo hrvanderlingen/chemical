@@ -50,9 +50,7 @@ class XMLTreeService extends TreeService implements TreeServiceInterface
 
         $attributes = $parent->attributes();
         $code = $attributes['code'];
-
         if (substr_count($code, "-") < $this->maxDepth) {
-
             $children = $this->getChildren();
             if (count($children) == 0) {
                 $this->addEndNode($parent);
@@ -107,5 +105,4 @@ class XMLTreeService extends TreeService implements TreeServiceInterface
 
         return $category;
     }
-
 }

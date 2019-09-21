@@ -17,7 +17,7 @@ class RandomTreeService extends TreeService implements TreeServiceInterface
         return $category;
     }
 
-    function generateRandomString($length = 9)
+    public function generateRandomString($length = 9)
     {
         $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
         $charactersLength = strlen($characters);
@@ -27,5 +27,4 @@ class RandomTreeService extends TreeService implements TreeServiceInterface
         }
         return $randomString;
     }
-
 }
