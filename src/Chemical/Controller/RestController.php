@@ -6,6 +6,7 @@ use Zend\Mvc\Controller\AbstractRestfulController;
 use Zend\View\Model\JsonModel;
 use Chemical\Service\TreeService;
 use Chemical\Service\JwtService;
+use Firebase\JWT\JWT;
 
 class RestController extends AbstractRestfulController
 {
@@ -24,7 +25,33 @@ class RestController extends AbstractRestfulController
     public function get($id)
     {
 
-        $headers = $this->getAccessControlHeaders();
+        // check JWT token
+        $request = $this->getRequest();
+        $headers = $request->getHeaders();
+        $authorizationHeader = $headers->get('Authorization');
+        if ($authorizationHeader) {
+            $authorization = $authorizationHeader->getFieldValue();
+        } else {
+            $this->response->setStatusCode(401);
+            return new JsonModel(["error" => 1]);
+        }
+
+        list($jwt_token) = sscanf($authorization, 'Bearer %s');
+
+        try {
+            $secretKey = $this->config['jwt_secret'];
+            $payload = JWT::decode($jwt_token, $secretKey, array('HS512'));
+            $username = $payload->data->username;
+        } catch (\Exception $e) {
+            $data = array(
+                'success' => false,
+                'message' => $e->getMessage(),
+            );
+            $this->response->setStatusCode(400);
+            return new JsonModel($data);
+        }
+
+        $headers = $this->jwtService->getAccessControlHeaders();
 
         $this->getResponse()->getHeaders()->addHeaders($headers);
         $data = [];
@@ -36,11 +63,10 @@ class RestController extends AbstractRestfulController
 
     public function create($data)
     {
-        $headers = $headers = $this->getAccessControlHeaders();
+        $headers = $headers = $this->jwtService->getAccessControlHeaders();
 
         switch ($this->getRequest()->getRequestUri()) {
             case "/chemistry/rest/new-tree":
-
                 $node = ['node' => ''];
                 $tree = $this->treeService->getTree($node);
                 ini_set('memory_limit', '400MB');
@@ -49,15 +75,12 @@ class RestController extends AbstractRestfulController
                 break;
 
             case "/chemistry/rest/tree/node":
-
                 ini_set('memory_limit', '400MB');
-
                 $path = $this->config['treeStore'] . '/default.xml';
 
                 $xml = simplexml_load_file($path);
                 $response = [];
                 if ($xml instanceof \SimpleXMLElement) {
-
                     $dom = new \DOMDocument('1.0', 'utf-8');
                     $dom->preserveWhiteSpace = false;
                     $dom->load($path);
@@ -68,7 +91,6 @@ class RestController extends AbstractRestfulController
                 }
                 break;
             case "/chemistry/rest/service/login":
-
                 $mockCredentials = [
                     [
                         'email' => 'test@example.com',
@@ -80,16 +102,21 @@ class RestController extends AbstractRestfulController
                 $validated = false;
 
                 foreach ($mockCredentials as $credential) {
-                    if (password_verify($data['password'], $credential['hash'])) {
-                        $token = $this->jwtService->createToken();
-
+                    if ($data['username'] === $credential['email'] &&
+                        password_verify($data['password'], $credential['hash'])) {
                         $user = [
                             'username' => $data['username'],
                             'firstname' => $credential['firstname'],
-                            'lastname' => $credential['lastname'],
-                            'token' => $token->getPayLoad()
+                            'lastname' => $credential['lastname']
                         ];
 
+                        $this->jwtService->setUser($user);
+                        $data = $this->jwtService->setJwtData();
+
+                        $secretKey = $this->config['jwt_secret'];
+                        $jwt = JWT::encode($data, $secretKey, 'HS512');
+
+                        $user['token'] = $jwt;
                         $response = $user;
                         $validated = true;
                         break;
@@ -97,7 +124,8 @@ class RestController extends AbstractRestfulController
                 }
 
                 if (!$validated) {
-                    $response = ['error' => 1];
+                    $this->response->setStatusCode(401);
+                    $response = ['error' => 1, 'errorMessage' => 'Username or password not valid'];
                 }
 
                 break;
@@ -108,17 +136,7 @@ class RestController extends AbstractRestfulController
 
     public function options()
     {
-        $headers = $this->getAccessControlHeaders();
+        $headers = $this->jwtService->getAccessControlHeaders();
         $this->getResponse()->getHeaders()->addHeaders($headers);
     }
-
-    protected function getAccessControlHeaders()
-    {
-        return $headers = array(
-            'Access-Control-Allow-Origin' => '*',
-            'Access-Control-Allow-Methods' => 'POST,GET',
-            'Access-Control-Allow-Headers' => 'Origin, X-Requested-With, Content-Type, Accept',
-        );
-    }
-
 }

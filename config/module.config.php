@@ -89,7 +89,7 @@ return array(
                 return new Chemical\Service\XMLTreeService( );
             },
             'jwtService' => function($container) {
-                return new Chemical\Service\JwtService( );
+                return new Chemical\Service\JwtService($container->get('config'));
             },
         )
     ),
