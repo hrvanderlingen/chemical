@@ -54,9 +54,9 @@ return array(
                                 'controller' => 'Rest',
                                 'action' => ''
                             ),
-//                            'constraints' => array(
-//                                'id' => '[a-z]{1,11}'
-//                            )
+                            'constraints' => array(
+                                'id' => '[a-z-]{1,11}'
+                            )
                         ),
                     ),
                     'service-tree' => array(

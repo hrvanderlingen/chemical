@@ -12,7 +12,7 @@ class XMLTreeService extends TreeService implements TreeServiceInterface
      * Limit to the number of child nodes
      * @var int
      */
-    protected $maxDepth = 4;
+    protected $maxDepth = 5;
 
     /**
      * Internal counter
@@ -27,7 +27,7 @@ class XMLTreeService extends TreeService implements TreeServiceInterface
     {
 
         // create a random xml file.
-        $parent = new \SimpleXMLElement('<products/>');
+        $parent = new \SimpleXMLElement('<collection/>');
         $key = 'product';
         $parent->addAttribute('code', $this->count);
         $this->count++;
@@ -78,13 +78,13 @@ class XMLTreeService extends TreeService implements TreeServiceInterface
      */
     protected function addEndNode($parent)
     {
-        $node = $parent->addChild('product' . $this->count);
+        $node = $parent->addChild('product');
         $this->count++;
         $node->addChild('description', 'software');
         $node->addChild('version', rand(2, 500));
         $node->addChild('price', rand(200, 500));
         $node->addChild('productCode', $this->generateRandomString());
-        $node = $parent->addChild('product' . $this->count);
+        $node = $parent->addChild('product');
         $this->count++;
         $node->addChild('description', 'hardware');
         $node->addChild('weight', rand(2, 500));

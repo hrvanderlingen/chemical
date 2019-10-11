@@ -76,11 +76,11 @@ class JwtService
      */
     public function getAccessControlHeaders()
     {
-        return $headers = array(
-            'Access-Control-Allow-Origin' => '*',
+        return array(
+            'Access-Control-Allow-Origin' => $this->config['Access-Control-Allow-Origin'],
             'Access-Control-Allow-Methods' => 'POST,GET',
-            'Access-Control-Allow-Headers' => 'Origin, X-Requested-With, Content-Type, '
-            . 'Accept, Authorization, Access-Control-Allow-Origin',
+            'Access-Control-Allow-Headers' => 'Origin,X-Requested-With,content-type, '
+            . 'Accept,Authorization',
         );
     }
 }
