@@ -97,6 +97,7 @@ class RestController extends AbstractRestfulController
                         'email' => 'test@example.com',
                         'firstname' => 'Peter',
                         'lastname' => 'Smith',
+                        'role' => 'Admin',
                         'hash' => password_hash('notsosecret', PASSWORD_DEFAULT)
                     ]
                 ];
@@ -108,7 +109,8 @@ class RestController extends AbstractRestfulController
                         $user = [
                             'username' => $data['username'],
                             'firstname' => $credential['firstname'],
-                            'lastname' => $credential['lastname']
+                            'lastname' => $credential['lastname'],
+                            'role' => $credential['role']
                         ];
 
                         $this->jwtService->setUser($user);
