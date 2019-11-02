@@ -7,6 +7,7 @@ use Zend\View\Model\JsonModel;
 use Chemical\Service\TreeService;
 use Chemical\Service\JwtService;
 use Firebase\JWT\JWT;
+use Chemical\Service\RscService;
 
 class RestController extends AbstractRestfulController
 {
@@ -14,12 +15,14 @@ class RestController extends AbstractRestfulController
     protected $config;
     protected $treeService;
     protected $jwtService;
+    protected $rscService;
 
-    public function __construct($config, TreeService $treeService, JwtService $jwtService)
+    public function __construct($config, TreeService $treeService, JwtService $jwtService, RscService $rscService)
     {
         $this->config = $config;
         $this->treeService = $treeService;
         $this->jwtService = $jwtService;
+        $this->rscService = $rscService;
     }
 
     public function get($id)
@@ -63,16 +66,15 @@ class RestController extends AbstractRestfulController
                 break;
             case "node":
                 $path = $this->config['treeStore'] . '/new.xml';
-
                 $xml = simplexml_load_file($path);
                 $data = [];
+
                 $message = 'OK';
                 if ($xml instanceof \SimpleXMLElement) {
                     $dom = new \DOMDocument('1.0', 'utf-8');
                     $dom->preserveWhiteSpace = false;
                     $dom->load($path);
                     $xPath = new \DOMXPath($dom);
-                    //  $products = $xPath->query('//bookstore/book');
                     $products = $xPath->query("//collection/products/product");
 
                     foreach ($products as $product) {
@@ -81,7 +83,17 @@ class RestController extends AbstractRestfulController
                         ];
                     }
                 }
+
                 return new JsonModel($data);
+                break;
+            case "rsc-data-resources":
+                $data = $this->rscService->getSources();
+                $this->response->setStatusCode($data['code']);
+                return new JsonModel($data['body']);
+                break;
+            default:
+                $this->response->setStatusCode(404);
+                return new JsonModel(['error' => 1, 'reason' => 'page not found']);
                 break;
         }
     }

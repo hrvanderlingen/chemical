@@ -55,7 +55,7 @@ return array(
                                 'action' => ''
                             ),
                             'constraints' => array(
-                                'id' => '[a-z-]{1,11}'
+                                'id' => '[a-z-]{1,30}'
                             )
                         ),
                     ),
@@ -91,6 +91,9 @@ return array(
             'jwtService' => function($container) {
                 return new Chemical\Service\JwtService($container->get('config'));
             },
+            'rscService' => function($container) {
+                return new Chemical\Service\RscService($container->get('config'));
+            },
         )
     ),
     'controllers' => array(
@@ -98,7 +101,8 @@ return array(
         'factories' => array(
             Rest::class => function($container) {
                 return new Chemical\Controller\RestController(
-                    $container->get('config'), $container->get('treeService'), $container->get('jwtService')
+                    $container->get('config'), $container->get('treeService'), $container->get('jwtService'),
+                    $container->get('rscService')
                 );
             },
             Chemical\Controller\IndexController::class => function($container) {
