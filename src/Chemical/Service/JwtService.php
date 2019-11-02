@@ -39,7 +39,7 @@ class JwtService
         $tokenId = base64_encode(random_bytes(5));
         $issuedAt = time();
         $notBefore = $issuedAt - 10;
-        $expire = $notBefore + 60;
+        $expire = $notBefore + 60 * 60;
         $serverName = $this->config['jwt_servername'];
         $data = array(
             'iat' => $issuedAt,
