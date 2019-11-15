@@ -53,7 +53,7 @@ class XMLTreeService extends TreeService implements TreeServiceInterface
         if (substr_count($code, "-") < $this->maxDepth) {
             $children = $this->getChildren();
             if (count($children) == 0) {
-                $this->addEndNode($parent);
+                $this->addEndNodes($parent);
             } else {
                 $newParent = $parent->addChild('products');
                 foreach ($children as $child) {
@@ -64,32 +64,26 @@ class XMLTreeService extends TreeService implements TreeServiceInterface
                     $node->addAttribute('ID', $value);
                     $node->addAttribute('code', $newKey);
                     $node->addChild('productCode', $child);
+                    $node->addChild('description', 'hardware');
+                    $node->addChild('version', rand(2, 500));
                     $this->iterateChildren($node, $newKey);
                 }
             }
         } else {
-            $this->addEndNode($parent);
+            $this->addEndNodes($parent);
         }
     }
 
     /**
-     * Add an example node
+     * Add example nodes
      * @param \Chemical\Service\SimpleXMLElement $parent
      */
-    protected function addEndNode($parent)
+    protected function addEndNodes($parent)
     {
-        $node = $parent->addChild('product');
-        $this->count++;
-        $node->addChild('description', 'software');
-        $node->addChild('version', rand(2, 500));
-        $node->addChild('price', rand(200, 500));
-        $node->addChild('productCode', $this->generateRandomString());
-        $node = $parent->addChild('product');
-        $this->count++;
-        $node->addChild('description', 'hardware');
-        $node->addChild('weight', rand(2, 500));
-        $node->addChild('price', rand(200, 500));
-        $node->addChild('productCode', $this->generateRandomString());
+        $max = rand(2, 5);
+        for ($i = 0; $i < $max; $i++) {
+            $this->endNode($parent);
+        }
     }
 
     /**
@@ -104,5 +98,20 @@ class XMLTreeService extends TreeService implements TreeServiceInterface
         }
 
         return $category;
+    }
+
+    /**
+     * Add example node
+     * @param \Chemical\Service\SimpleXMLElement $parent
+     */
+    protected function endNode($parent)
+    {
+        $descriptions = ['software', 'parts', 'assembly', 'compliance', 'certification'];
+        $node = $parent->addChild('product');
+        $node->addChild('description', $descriptions[array_rand($descriptions)]);
+        $node->addChild('version', rand(2, 500));
+        $node->addChild('price', rand(200, 500));
+        $node->addChild('productCode', $this->generateRandomString());
+        $this->count++;
     }
 }

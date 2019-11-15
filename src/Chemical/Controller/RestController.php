@@ -8,6 +8,7 @@ use Chemical\Service\TreeService;
 use Chemical\Service\JwtService;
 use Firebase\JWT\JWT;
 use Chemical\Service\RscService;
+use Chemical\Service\ExistDbService;
 
 class RestController extends AbstractRestfulController
 {
@@ -16,17 +17,21 @@ class RestController extends AbstractRestfulController
     protected $treeService;
     protected $jwtService;
     protected $rscService;
+    protected $existDbService;
 
-    public function __construct($config, TreeService $treeService, JwtService $jwtService, RscService $rscService)
+    public function __construct($config, TreeService $treeService, JwtService $jwtService, RscService $rscService,
+        ExistDbService $existDbService)
     {
         $this->config = $config;
         $this->treeService = $treeService;
         $this->jwtService = $jwtService;
         $this->rscService = $rscService;
+        $this->existDbService = $existDbService;
     }
 
     public function get($id)
     {
+
         // check JWT token
         $headers = $this->jwtService->getAccessControlHeaders();
         $this->getResponse()->getHeaders()->addHeaders($headers);
@@ -58,11 +63,27 @@ class RestController extends AbstractRestfulController
         switch ($id) {
             case "new":
                 $node = ['node' => ''];
+                ini_set('memory_limit', '500MB');
                 $tree = $this->treeService->getTree($node);
-                ini_set('memory_limit', '400MB');
+
                 file_put_contents($this->config['treeStore'] . "/new.xml", $tree);
                 $message = 'OK';
                 return new JsonModel(['message' => $message]);
+                break;
+            case "products":
+                $data = [];
+                $result = $this->existDbService
+                    ->connect()
+                    ->setCollection('products')
+                    ->query('GET', '//collection/products/product//productCode');
+
+                $xml = simplexml_load_string($result);
+                foreach ($xml->productCode as $productCode) {
+                    $data[] = [
+                        'title' => (string) $productCode,
+                    ];
+                }
+                return new JsonModel($data);
                 break;
             case "node":
                 $path = $this->config['treeStore'] . '/new.xml';

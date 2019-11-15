@@ -94,6 +94,9 @@ return array(
             'rscService' => function($container) {
                 return new Chemical\Service\RscService($container->get('config'));
             },
+            'existDbService' => function($container) {
+                return new Chemical\Service\ExistDbService($container->get('config'));
+            },
         )
     ),
     'controllers' => array(
@@ -102,7 +105,7 @@ return array(
             Rest::class => function($container) {
                 return new Chemical\Controller\RestController(
                     $container->get('config'), $container->get('treeService'), $container->get('jwtService'),
-                    $container->get('rscService')
+                    $container->get('rscService'), $container->get('existDbService')
                 );
             },
             Chemical\Controller\IndexController::class => function($container) {
