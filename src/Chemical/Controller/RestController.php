@@ -54,9 +54,9 @@ class RestController extends AbstractRestfulController
         } catch (\Exception $e) {
             $data = array(
                 'success' => false,
-                'message' => $e->getMessage(),
+                'errorMessage' => $e->getMessage(),
             );
-            $this->response->setStatusCode(400);
+            $this->response->setStatusCode(401);
             return new JsonModel($data);
         }
 
@@ -114,7 +114,7 @@ class RestController extends AbstractRestfulController
                 break;
             default:
                 $this->response->setStatusCode(404);
-                return new JsonModel(['error' => 1, 'reason' => 'page not found']);
+                return new JsonModel(['error' => 1, 'errorMessage' => 'page not found']);
                 break;
         }
     }
