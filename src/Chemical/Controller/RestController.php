@@ -73,9 +73,13 @@ class RestController extends AbstractRestfulController
             case "products":
                 $data = [];
                 $result = $this->existDbService
-                    ->connect()
                     ->setCollection('products')
                     ->query('GET', '//collection/products/product//productCode');
+
+                if ($this->existDbService->gethasError()) {
+                    $this->response->setStatusCode(500);
+                    return new JsonModel(['errorMessage' => $this->existDbService->getErrorMessage()]);
+                }
 
                 $xml = simplexml_load_string($result);
                 foreach ($xml->productCode as $productCode) {
