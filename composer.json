@@ -13,6 +13,7 @@
     ],
      "require": {
         "firebase/php-jwt": "dev-master",
-        "guzzlehttp/guzzle": "~6.0"
+        "guzzlehttp/guzzle": "~6.0",
+        "authy/php": "3.*"
     }
 }
