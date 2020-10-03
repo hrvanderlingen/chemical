@@ -8,8 +8,17 @@ use Zend\View\Model\ViewModel;
 class IndexController extends AbstractActionController
 {
 
-    public function indexAction()
+    protected $config;
+    
+
+    public function __construct($config)
     {
+        $this->config = $config;      
+    }
+
+    public function indexAction()
+    {        
+        $authy_api = new Authy\AuthyApi($this->config['authy']['api_key']);
         return new ViewModel();
     }
 }

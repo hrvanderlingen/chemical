@@ -109,7 +109,7 @@ return array(
                 );
             },
             Chemical\Controller\IndexController::class => function($container) {
-                return new Chemical\Controller\IndexController();
+                return new Chemical\Controller\IndexController($container->get('config'));
             }
         )
     ),
