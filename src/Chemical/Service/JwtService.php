@@ -2,6 +2,8 @@
 
 namespace Chemical\Service;
 
+use Firebase\JWT\JWT;
+
 /**
  * Class for JSON web tokens
  * inspired by https://www.sitepoint.com/php-authorization-jwt-json-web-tokens/
@@ -82,5 +84,18 @@ class JwtService
             'Access-Control-Allow-Headers' => 'Origin,X-Requested-With,content-type, '
             . 'Accept,Authorization',
         );
+    }
+
+    /**
+     * Extract the payload from the authorization string
+     * @param string $authorization
+     * @return \stdClass
+     *
+     */
+    public function extractPayload(string $authorization): \stdClass
+    {
+        list($jwt_token) = sscanf($authorization, 'Bearer %s');
+        $secretKey = $this->config['jwt_secret'];
+        return JWT::decode($jwt_token, $secretKey, array('HS512'));
     }
 }

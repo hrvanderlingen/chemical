@@ -3,6 +3,7 @@
 // copy to config/autoload folder of main project
 
 return [
+    'environment' => 'dev',
     'treeStore' => "path/to/folder/for/storing/tree/xml/files",
     'jwt_secret' => 'your-secret-here',
     'jwt_servername' => 'your-server-name-here',
@@ -11,5 +12,16 @@ return [
     'existdb_Host' => 'http://localhost:8082',
     'existdb_Path' => '/exist/rest',
     'existdb_User' => 'admin',
-    'existdb_Pass' => ''
+    'existdb_Pass' => '',
+    'twofactor' => [
+		'active' => true,
+		'provider' => 'twilio'
+	],
+    'twilio' => [
+        'account_sid' => 'xxx',
+        'auth_token' => 'xxx',
+        'service_sid' => 'xxx',
+        'tel_from' => '+000000000000',
+        'debug_tel_to' => '+00000000000'
+    ]
 ];

@@ -4,11 +4,14 @@ namespace Chemical\Controller;
 
 use Zend\Mvc\Controller\AbstractRestfulController;
 use Zend\View\Model\JsonModel;
+use Zend\Validator\EmailAddress;
 use Chemical\Service\TreeService;
 use Chemical\Service\JwtService;
 use Firebase\JWT\JWT;
 use Chemical\Service\RscService;
 use Chemical\Service\ExistDbService;
+use Chemical\Service\VerifyServiceInterface;
+use Chemical\Service\UserServiceInterface;
 
 class RestController extends AbstractRestfulController
 {
@@ -18,15 +21,19 @@ class RestController extends AbstractRestfulController
     protected $jwtService;
     protected $rscService;
     protected $existDbService;
+    protected $verifyService;
+    protected $userService;
 
     public function __construct($config, TreeService $treeService, JwtService $jwtService, RscService $rscService,
-        ExistDbService $existDbService)
+        ExistDbService $existDbService, VerifyServiceInterface $verifyService, UserServiceInterface $userService)
     {
         $this->config = $config;
         $this->treeService = $treeService;
         $this->jwtService = $jwtService;
         $this->rscService = $rscService;
         $this->existDbService = $existDbService;
+        $this->verifyService = $verifyService;
+        $this->userService = $userService;
     }
 
     public function get($id)
@@ -45,11 +52,8 @@ class RestController extends AbstractRestfulController
             return new JsonModel([]);
         }
 
-        list($jwt_token) = sscanf($authorization, 'Bearer %s');
-
         try {
-            $secretKey = $this->config['jwt_secret'];
-            $payload = JWT::decode($jwt_token, $secretKey, array('HS512'));
+            $payload = $this->jwtService->extractPayload($authorization);
             $username = $payload->data->username;
         } catch (\Exception $e) {
             $data = array(
@@ -129,38 +133,30 @@ class RestController extends AbstractRestfulController
 
         switch ($this->getRequest()->getRequestUri()) {
             case "/chemistry/rest/service/login":
-                $mockCredentials = [
-                    [
-                        'email' => 'test@example.com',
-                        'firstname' => 'Peter',
-                        'lastname' => 'Smith',
-                        'role' => 'Admin',
-                        'hash' => password_hash('notsosecret', PASSWORD_DEFAULT)
-                    ]
-                ];
+
                 $validated = false;
+                $validator = new EmailAddress();
 
-                foreach ($mockCredentials as $credential) {
-                    if ($data['username'] === $credential['email'] &&
-                        password_verify($data['password'], $credential['hash'])) {
-                        $user = [
-                            'username' => $data['username'],
-                            'firstname' => $credential['firstname'],
-                            'lastname' => $credential['lastname'],
-                            'role' => $credential['role']
-                        ];
+                if ($validator->isValid($data['username'])) {
+                    $user = $this->userService->authenticate($data['username'], $data['password']);
+                }
 
-                        $this->jwtService->setUser($user);
-                        $data = $this->jwtService->setJwtData();
+                if (!is_null($user)) {
 
-                        $secretKey = $this->config['jwt_secret'];
-                        $jwt = JWT::encode($data, $secretKey, 'HS512');
-
-                        $user['token'] = $jwt;
-                        $response = $user;
-                        $validated = true;
-                        break;
+                    if ($this->config['twofactor']['active']) {
+                        $user->setTwofactorstatus($this->verifyService->sendToken($user->getPhone()));
                     }
+
+                    $this->jwtService->setUser($user->getArrayCopy());
+                    $data = $this->jwtService->setJwtData();
+
+                    $secretKey = $this->config['jwt_secret'];
+                    $jwt = JWT::encode($data, $secretKey, 'HS512');
+
+                    $user->setToken($jwt);
+                    $response = $user->getArrayCopy();
+                    $validated = true;
+                    break;
                 }
 
                 if (!$validated) {
@@ -168,6 +164,39 @@ class RestController extends AbstractRestfulController
                     $response = ['error' => 1, 'errorMessage' => 'Username or password not valid'];
                 }
 
+                break;
+            case "/chemistry/rest/service/verify":
+
+                $headers = $request->getHeaders();
+                $authorizationHeader = $headers->get('Authorization');
+                if ($authorizationHeader) {
+                    $authorization = $authorizationHeader->getFieldValue();
+                } else {
+                    $this->response->setStatusCode(500);
+                    return new JsonModel([]);
+                }
+
+                try {
+
+                    if (!preg_match("/[0-9]{6}/", $data['smscode'])) {
+                        throw new \Exception('SMS code invalid');
+                    }
+
+                    $payload = $this->jwtService->extractPayload($authorization);
+                } catch (\Exception $e) {
+                    $data = array(
+                        'success' => false,
+                        'errorMessage' => $e->getMessage(),
+                    );
+                    $this->response->setStatusCode(401);
+                    return new JsonModel($data);
+                }
+
+                $user = $this->userService->find($payload->data->username);
+
+                $status = $this->verifyService->verify($data['smscode'], $user->getPhone());
+                $this->response->setStatusCode(200);
+                return new JsonModel(['twofactorstatus' => $status]);
                 break;
         }
         $this->getResponse()->getHeaders()->addHeaders($headers);

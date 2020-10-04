@@ -97,6 +97,12 @@ return array(
             'existDbService' => function($container) {
                 return new Chemical\Service\ExistDbService($container->get('config'));
             },
+            'verifyService' => function($container) {
+                return new Chemical\Service\TwilioService($container->get('config'));
+            },
+            'userService' => function($container) {
+                return new Chemical\Service\MockUserService($container->get('config'));
+            },
         )
     ),
     'controllers' => array(
@@ -105,7 +111,8 @@ return array(
             Rest::class => function($container) {
                 return new Chemical\Controller\RestController(
                     $container->get('config'), $container->get('treeService'), $container->get('jwtService'),
-                    $container->get('rscService'), $container->get('existDbService')
+                    $container->get('rscService'), $container->get('existDbService'), $container->get('verifyService'),
+                    $container->get('userService')
                 );
             },
             Chemical\Controller\IndexController::class => function($container) {

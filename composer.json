@@ -14,6 +14,6 @@
      "require": {
         "firebase/php-jwt": "dev-master",
         "guzzlehttp/guzzle": "~6.0",
-        "authy/php": "3.*"
+        "twilio/sdk": "^6.10"
     }
 }
