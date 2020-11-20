@@ -49,7 +49,7 @@ class RestController extends AbstractRestfulController
             $authorization = $authorizationHeader->getFieldValue();
         } else {
             $this->response->setStatusCode(200);
-            return new JsonModel([]);
+            return new JsonModel(['message' => 'authorisation header missing']);
         }
 
         try {
@@ -65,14 +65,28 @@ class RestController extends AbstractRestfulController
         }
 
         switch ($id) {
+            case "file":
+                $data = [];
+                $data[] = [
+                    "fileName" => "test pdf file",
+                    "encoding" => "application/pdf",
+                    "binaryString" => utf8_encode(base64_encode(
+                            file_get_contents(__DIR__ . '/../../../data/testPdf.pdf')
+                    ))
+                ];
+                
+                return new JsonModel($data);
+                break;
             case "new":
                 $node = ['node' => ''];
                 ini_set('memory_limit', '500MB');
                 $tree = $this->treeService->getTree($node);
 
                 file_put_contents($this->config['treeStore'] . "/new.xml", $tree);
-                $message = 'OK';
-                return new JsonModel(['message' => $message]);
+                 $data[] = [
+                    'message' => "OK",
+                ];
+                return new JsonModel($data);
                 break;
             case "products":
                 $data = [];

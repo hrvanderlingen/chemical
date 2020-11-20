@@ -81,8 +81,9 @@ class JwtService
         return array(
             'Access-Control-Allow-Origin' => $this->config['Access-Control-Allow-Origin'],
             'Access-Control-Allow-Methods' => 'POST,GET',
-            'Access-Control-Allow-Headers' => 'Origin,X-Requested-With,content-type, '
-            . 'Accept,Authorization',
+            'Access-Control-Allow-Credentials' => true,
+            'Access-Control-Allow-Headers' => 'Origin,X-Requested-With,Content-Type, '
+            . 'Accept,Authorization, Accept-Encoding',
         );
     }
 
